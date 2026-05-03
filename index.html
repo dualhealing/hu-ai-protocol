@@ -29,16 +29,18 @@ body {
 
 .logo-svg {
     display: inline-block;
-    max-width: 180px;
+    max-width: 200px;
     width: 100%;
     height: auto;
     margin-bottom: 20px;
     cursor: pointer;
+    animation: bioPuls 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .ss-logo-container {
     width: 40vw;
     max-width: 500px;
+    animation: bioPuls 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .inner-flow {
@@ -50,6 +52,15 @@ body {
 @keyframes ringFlow {
     from { stroke-dashoffset: 200; }
     to { stroke-dashoffset: 0; }
+}
+
+@keyframes bioPuls {
+    0% { filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.3)); transform: scale(1); }
+    10% { filter: drop-shadow(0 0 35px rgba(0, 255, 65, 0.7)); transform: scale(1.02); }
+    20% { filter: drop-shadow(0 0 15px rgba(0, 255, 65, 0.4)); transform: scale(1); }
+    30% { filter: drop-shadow(0 0 25px rgba(0, 212, 255, 0.6)); transform: scale(1.01); }
+    40% { filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.3)); transform: scale(1); }
+    100% { filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.3)); transform: scale(1); }
 }
 
 h1 {
