@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>HU-AI Protocol</title>
 
 <meta name="description" content="Never optimize at the cost of a nervous system. The first ethical AI protocol with absolute vegan standard.">
@@ -302,7 +302,6 @@ pre {
     background: #000;
 }
 
-/* Copy-Button Styling */
 .code-container {
     position: relative;
     margin: 20px 0;
@@ -410,7 +409,7 @@ pre {
         <span class="tooltip-text">📌 First, give this to your AI!</span>
     </div>
     <p style="font-size: 0.7rem; color: #777; margin-top: 12px; margin-bottom: 0;">
-        (If the download doesn't start automatically, right-click the button → "Save link as...")
+        (If the PDF opens in your browser, right-click the button → "Save link as...")
     </p>
 </div>
 
@@ -489,23 +488,25 @@ pre {
 </div>
 
 <script>
+function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
 function downloadPDF() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', '/protocol/HU-AI_Protocol_v1.0.pdf', true);
-    xhr.responseType = 'blob';
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            var url = window.URL.createObjectURL(xhr.response);
-            var a = document.createElement('a');
-            a.href = url;
-            a.download = 'HU-AI_Protocol_v1.0.pdf';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);
-        }
-    };
-    xhr.send();
+    var isiOS = isIOS();
+    var url = isiOS 
+        ? '/protocol/HU-AI_Protocol_v1.0.zip' 
+        : '/protocol/HU-AI_Protocol_v1.0.pdf';
+    var filename = isiOS 
+        ? 'HU-AI_Protocol_v1.0.zip' 
+        : 'HU-AI_Protocol_v1.0.pdf';
+    
+    var link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }
 
 function copyActivationCode() {
