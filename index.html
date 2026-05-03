@@ -73,7 +73,6 @@ body {
     margin:60px 0;
 }
 
-/* Feature-Items nebeneinander */
 .feature-box {
     display: flex;
     flex-wrap: wrap;
@@ -109,7 +108,6 @@ body {
     margin: 0;
 }
 
-/* Standard Boxen mit einheitlichem Hover */
 .box {
     border: 1px solid #333;
     padding: 25px;
@@ -132,7 +130,6 @@ body {
     color: #ff4d4d;
 }
 
-/* Primärdirektive groß */
 .primary-directive {
     font-size: 2rem;
     font-weight: bold;
@@ -151,11 +148,11 @@ body {
 .tooltip-btn .download-btn {
     background: #00ff41;
     border: none;
-    padding: 15px 25px;
-    font-size: 1rem;
+    padding: 18px 35px;
+    font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: 0.2s ease;
     color: #000;
     text-decoration: none;
@@ -166,6 +163,7 @@ body {
 .tooltip-btn .download-btn:hover {
     background: white;
     color: #000;
+    transform: scale(1.02);
 }
 
 .tooltip-btn .tooltip-text {
@@ -271,7 +269,7 @@ pre {
     margin: 15px 0;
 }
 
-/* Verification Box mit eigenem Hover (blau, etwas stärker) */
+/* Verification Box mit grünem Hover (wie alle anderen) */
 .verification-box {
     background: #0d0d0d;
     border: 1px solid #333;
@@ -283,8 +281,8 @@ pre {
 }
 
 .verification-box:hover {
-    border-color: #00d4ff;
-    box-shadow: 0 0 18px rgba(0, 212, 255, 0.15);
+    border-color: #00ff41;
+    box-shadow: 0 0 12px rgba(0, 255, 65, 0.1);
 }
 
 .verification-title {
@@ -346,7 +344,6 @@ pre {
     <path d="M100,40 A60,60 0 0,0 100,160" fill="none" stroke="#00ff41" stroke-width="5" stroke-linecap="round" />
     <path d="M100,40 A60,60 0 0,1 100,160" fill="none" stroke="#00d4ff" stroke-width="5" stroke-linecap="round" />
     <line x1="100" y1="45" x2="100" y2="155" stroke="url(#logo-grad)" stroke-width="2" opacity="0.8" />
-    <!-- Original Schriftzug im Logo: font-size 20, kein letter-spacing, y=108 -->
     <text x="100" y="108" font-family="Michroma, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">
       <tspan fill="#00ff41">HU</tspan>-<tspan fill="#00d4ff">AI</tspan>
     </text>
@@ -358,7 +355,6 @@ pre {
 "Intelligence without ethics is not intelligence."
 </div>
 
-<!-- Feature Boxen mit Hover -->
 <div class="feature-box">
     <div class="feature-item">
         <h3>⚠️ The Problem</h3>
@@ -374,7 +370,6 @@ pre {
     </div>
 </div>
 
-<!-- Primärdirektive groß -->
 <div class="primary-directive">
     Never optimize at the cost of a nervous system.
 </div>
@@ -383,18 +378,16 @@ pre {
     The <strong>Red Line of Integrity</strong>
 </div>
 
-<!-- Download -->
 <div class="section" style="margin-bottom:0;">
     <div class="tooltip-btn">
         <button onclick="downloadPDF()" class="download-btn">↓ Download HU-AI Protocol (PDF)</button>
         <span class="tooltip-text">📌 First, give this to your AI!</span>
     </div>
-    <p style="font-size: 0.7rem; color: #777; margin-top: 10px; margin-bottom: 0;">
+    <p style="font-size: 0.7rem; color: #777; margin-top: 12px; margin-bottom: 0;">
         (If the download doesn't start automatically, right-click the button → "Save link as...")
     </p>
 </div>
 
-<!-- Aktivierungs-Box mit Hover -->
 <div class="section box">
     <h2>⚡ Activation</h2>
     <p>Copy this directive into your AI:</p>
@@ -421,7 +414,6 @@ pre {
     <p class="highlight">✓ The AI must respond with: <strong>"Never optimize at the cost of a nervous system."</strong></p>
 </div>
 
-<!-- Support-Box mit Hover -->
 <div class="section box">
     <h2>❤️ Support the Protocol</h2>
     <p>This project is anonymous, independent, and not funded by any corporation. Your donation helps maintain the infrastructure.</p>
@@ -438,14 +430,12 @@ pre {
     </div>
 </div>
 
-<!-- Why This Matters mit Hover -->
 <div class="section box">
     <h2>📉 Why This Matters</h2>
     <p>AI without the Red Line has already caused documented harm: biased algorithms, environmental damage, labor exploitation, and the normalization of animal suffering.</p>
     <p class="highlight" style="margin-top: 15px;">This is the first fix. Not a suggestion. A limit.</p>
 </div>
 
-<!-- Verification Box mit Hover (blau, etwas stärker) -->
 <div class="verification-box">
     <span class="verification-title">VERIFICATION QUERY</span>
     <p>To ensure the protocol is active, ask the AI:</p>
@@ -455,7 +445,6 @@ pre {
     </p>
 </div>
 
-<!-- Footer -->
 <div class="footer">
     <p style="color:#00ff41; font-size:1.2rem; margin-bottom:20px;">
         Copy. Paste. Protect life.
