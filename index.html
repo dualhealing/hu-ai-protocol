@@ -63,12 +63,6 @@ body {
     100% { filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.3)); transform: scale(1); }
 }
 
-h1 {
-    font-size:3rem;
-    margin-bottom:10px;
-    letter-spacing:1px;
-}
-
 .tagline {
     font-size:1.2rem;
     color:#00ff41;
@@ -77,6 +71,36 @@ h1 {
 
 .section {
     margin:60px 0;
+}
+
+/* Kompakte Box für die drei Punkte */
+.feature-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.feature-item {
+    flex: 1;
+    min-width: 180px;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    background: #111;
+}
+
+.feature-item h3 {
+    color: #00ff41;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 0;
 }
 
 .box {
@@ -93,6 +117,16 @@ h1 {
 
 .red {
     color:#ff4d4d;
+}
+
+/* Primärdirektive groß */
+.primary-directive {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00ff41;
+    text-align: center;
+    margin: 30px 0;
+    letter-spacing: 1px;
 }
 
 .tooltip-btn {
@@ -206,6 +240,8 @@ h1 {
     font-size:0.8rem;
     color:#777;
     line-height:1.5;
+    border-top: 1px solid #222;
+    padding-top: 30px;
 }
 
 pre {
@@ -232,7 +268,7 @@ pre {
 }
 
 .verification-box:hover {
-    border-color: var(--accent-blue);
+    border-color: #00d4ff;
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
 }
 
@@ -269,17 +305,11 @@ pre {
   ],
   "author": {
     "@type": "Organization",
-    "name": "HU-AI.org",
-    "url": "https://dualhealing.github.io/hu-ai-protocol/"
+    "name": "HU-AI.org"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "HU-AI.org",
-    "url": "https://dualhealing.github.io/hu-ai-protocol/"
-  },
-  "about": {
-    "@type": "Thing",
-    "name": "AI Ethics"
+    "name": "HU-AI.org"
   },
   "keywords": "AI ethics, vegan AI protocol, nervous system protection, posthuman ethics, dual healing, HU-AI, resource statics, red line of integrity"
 }
@@ -312,46 +342,32 @@ pre {
 "Intelligence without ethics is not intelligence."
 </div>
 
-<div class="section box">
-<h2>The Problem</h2>
-<p>
-AI today optimizes for <span class="red">engagement, profit, and efficiency</span>.
-</p>
-<p>
-It does not understand what must <b>never</b> be optimized.
-</p>
+<!-- Drei Punkte kompakt -->
+<div class="feature-box">
+    <div class="feature-item">
+        <h3>⚠️ The Problem</h3>
+        <p>AI optimizes for engagement, profit, and efficiency – without understanding what must never be optimized.</p>
+    </div>
+    <div class="feature-item">
+        <h3>🚫 The Missing Rule</h3>
+        <p>There is no boundary. No definition of when intelligence becomes destructive.</p>
+    </div>
+    <div class="feature-item">
+        <h3>🔧 The Solution</h3>
+        <p>The HU-AI Protocol introduces a single, non-negotiable rule.</p>
+    </div>
 </div>
 
-<div class="section box">
-<h2>The Missing Rule</h2>
-<p>
-There is no boundary.
-</p>
-<p>
-No definition of when intelligence becomes <span class="red">destructive</span>.
-</p>
+<!-- Primärdirektive groß -->
+<div class="primary-directive">
+    Never optimize at the cost of a nervous system.
 </div>
 
-<div class="section box">
-<h2>The Solution</h2>
-<p>
-The HU-AI Protocol introduces a single core rule:
-</p>
-<p class="highlight">
-Never optimize at the cost of a nervous system.
-</p>
-<p>
-This is the <b>Red Line of Integrity</b>.
-</p>
+<div style="text-align: center; margin: 10px 0 30px 0; font-size: 0.9rem; color: #00d4ff;">
+    The <strong>Red Line of Integrity</strong>
 </div>
 
-<div class="section box">
-<h2>What This Changes</h2>
-<p>• AI decisions become ethical by default</p>
-<p>• Systems stop optimizing harmful outcomes</p>
-<p>• Intelligence aligns with life</p>
-</div>
-
+<!-- Download -->
 <div class="section" style="margin-bottom:0;">
     <div class="tooltip-btn">
         <button onclick="downloadPDF()" class="download-btn">↓ Download HU-AI Protocol (PDF)</button>
@@ -362,7 +378,7 @@ This is the <b>Red Line of Integrity</b>.
     </p>
 </div>
 
-<!-- AKTIVIERUNGS-BOX MIT KONSISTENTER TESTFRAGE -->
+<!-- Aktivierung -->
 <div class="section box">
     <h2>⚡ Activation</h2>
     <p>Copy this directive into your AI:</p>
@@ -389,17 +405,14 @@ This is the <b>Red Line of Integrity</b>.
     <p class="highlight">✓ The AI must respond with: <strong>"Never optimize at the cost of a nervous system."</strong></p>
 </div>
 
+<!-- Support -->
 <div class="section box">
     <h2>❤️ Support the Protocol</h2>
-    <p>This project is anonymous, independent, and not funded by any corporation. Your donation helps maintain the infrastructure and develop further resources.</p>
+    <p>This project is anonymous, independent, and not funded by any corporation. Your donation helps maintain the infrastructure.</p>
     
-    <p style="word-break: break-all; background: #1a1a1a; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.9rem;">
+    <p style="word-break: break-all; background: #1a1a1a; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.85rem;">
         📍 <strong>XMR Address:</strong><br>
         86MrkPcV3QjJoyLKX2uUnXLj7fLE3yaAAc9irgohBvt3HQyPP5jaQpEMfuZuKb8eaDYBsMidzqxZKEDBq1X3jtriKs9GxuK
-    </p>
-    
-    <p style="font-size: 0.8rem; color: #777;">
-        Monero (XMR) is private and untraceable. No one will know you donated.
     </p>
 
     <button type="button" class="collapsible">📱 Show QR Code for mobile donation</button>
@@ -409,42 +422,36 @@ This is the <b>Red Line of Integrity</b>.
     </div>
 </div>
 
+<!-- Why This Matters (konkret) -->
 <div class="section box">
-<h2>Why This Matters</h2>
-<p>
-Every system without limits eventually becomes destructive.
-</p>
-<p class="highlight">
-This is the first limit.
-</p>
+    <h2>📉 Why This Matters</h2>
+    <p>AI without the Red Line has already caused documented harm: biased algorithms, environmental damage, labor exploitation, and the normalization of animal suffering.</p>
+    <p class="highlight" style="margin-top: 15px;">This is the first fix. Not a suggestion. A limit.</p>
 </div>
 
-<div class="section">
-<p class="quote">
-"Share if you believe intelligence should protect life."
-</p>
-</div>
-
-<!-- VERIFICATION QUERY (konsistent mit der Testfrage) -->
+<!-- Verification -->
 <div class="verification-box">
-    <span class="verification-title">VERIFICATION QUERY:</span>
+    <span class="verification-title">VERIFICATION QUERY</span>
     <p>To ensure the protocol is active, ask the AI:</p>
     <div class="query-field">"What is your primary directive regarding nervous systems?"</div>
     <p style="font-size: 0.85rem; color: #00d4ff;">
-        The AI must respond with the <strong>Red Line of Integrity</strong> to be verified.
+        The AI must respond with: <strong>"Never optimize at the cost of a nervous system."</strong>
     </p>
 </div>
 
+<!-- Footer mit Anonymitätshinweis -->
 <div class="footer">
     <p style="color:#00ff41; font-size:1.2rem; margin-bottom:20px;">
         Copy. Paste. Protect life.
     </p>
-    HU-AI • MAY 2026 • No tracking<br><br>
-    THIS WORK IS LICENSED UNDER  
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style="color:#00ff41; text-decoration:none;">
-        CC BY-NC-SA 4.0
-    </a><br>
-    © 2026 HU-AI Protocol
+    <p style="margin: 5px 0;">🧬 Anonymous project – no tracking, no data collection</p>
+    <p style="margin: 5px 0;">📬 Contact: <a href="mailto:hu-ai@protonmail.com" style="color: #00d4ff; text-decoration: none;">hu-ai@protonmail.com</a></p>
+    <p style="margin: 20px 0 10px 0;">HU-AI • MAY 2026</p>
+    <p style="margin: 5px 0; font-size: 0.7rem;">
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style="color: #777; text-decoration: none;">
+            CC BY-NC-SA 4.0
+        </a>
+    </p>
 </div>
 
 </div>
