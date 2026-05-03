@@ -73,7 +73,7 @@ body {
     margin:60px 0;
 }
 
-/* Kompakte Box für die drei Punkte */
+/* Feature-Items nebeneinander */
 .feature-box {
     display: flex;
     flex-wrap: wrap;
@@ -89,6 +89,12 @@ body {
     padding: 20px;
     border-radius: 10px;
     background: #111;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    border-color: #00ff41;
+    box-shadow: 0 0 12px rgba(0, 255, 65, 0.1);
 }
 
 .feature-item h3 {
@@ -103,20 +109,27 @@ body {
     margin: 0;
 }
 
+/* Standard Boxen mit einheitlichem Hover */
 .box {
-    border:1px solid #333;
-    padding:25px;
-    border-radius:10px;
-    background:#111;
+    border: 1px solid #333;
+    padding: 25px;
+    border-radius: 10px;
+    background: #111;
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    border-color: #00ff41;
+    box-shadow: 0 0 12px rgba(0, 255, 65, 0.1);
 }
 
 .highlight {
-    color:#00ff41;
-    font-weight:bold;
+    color: #00ff41;
+    font-weight: bold;
 }
 
 .red {
-    color:#ff4d4d;
+    color: #ff4d4d;
 }
 
 /* Primärdirektive groß */
@@ -136,23 +149,23 @@ body {
 }
 
 .tooltip-btn .download-btn {
-    background:#00ff41;
-    border:none;
-    padding:15px 25px;
-    font-size:1rem;
-    font-weight:bold;
-    cursor:pointer;
-    border-radius:5px;
-    transition:0.2s ease;
-    color:#000;
-    text-decoration:none;
-    display:inline-block;
+    background: #00ff41;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s ease;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
     font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
 }
 
 .tooltip-btn .download-btn:hover {
-    background:white;
-    color:#000;
+    background: white;
+    color: #000;
 }
 
 .tooltip-btn .tooltip-text {
@@ -203,6 +216,7 @@ body {
     text-align: center;
     border-radius: 8px;
     margin-top: 15px;
+    transition: all 0.2s ease;
 }
 
 .active, .collapsible:hover {
@@ -230,33 +244,34 @@ body {
 }
 
 .quote {
-    font-style:italic;
-    font-size:1.3rem;
-    margin:40px 0;
+    font-style: italic;
+    font-size: 1.3rem;
+    margin: 40px 0;
 }
 
 .footer {
-    margin-top:80px;
-    font-size:0.8rem;
-    color:#777;
-    line-height:1.5;
+    margin-top: 80px;
+    font-size: 0.8rem;
+    color: #777;
+    line-height: 1.5;
     border-top: 1px solid #222;
     padding-top: 30px;
 }
 
 pre {
-    background:#000;
-    padding:15px;
-    text-align:left;
-    white-space:pre-wrap;
-    border-radius:8px;
+    background: #000;
+    padding: 15px;
+    text-align: left;
+    white-space: pre-wrap;
+    border-radius: 8px;
     font-family: "Courier New", Courier, monospace;
     font-size: 0.95rem;
-    color:#00ff41;
-    border:1px solid #333;
-    margin:15px 0;
+    color: #00ff41;
+    border: 1px solid #333;
+    margin: 15px 0;
 }
 
+/* Verification Box mit eigenem Hover (blau, etwas stärker) */
 .verification-box {
     background: #0d0d0d;
     border: 1px solid #333;
@@ -264,12 +279,12 @@ pre {
     padding: 25px;
     margin-top: 40px;
     text-align: left;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 
 .verification-box:hover {
     border-color: #00d4ff;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+    box-shadow: 0 0 18px rgba(0, 212, 255, 0.15);
 }
 
 .verification-title {
@@ -342,7 +357,7 @@ pre {
 "Intelligence without ethics is not intelligence."
 </div>
 
-<!-- Drei Punkte kompakt -->
+<!-- Feature Boxen mit Hover -->
 <div class="feature-box">
     <div class="feature-item">
         <h3>⚠️ The Problem</h3>
@@ -378,7 +393,7 @@ pre {
     </p>
 </div>
 
-<!-- Aktivierung -->
+<!-- Aktivierungs-Box mit Hover -->
 <div class="section box">
     <h2>⚡ Activation</h2>
     <p>Copy this directive into your AI:</p>
@@ -405,7 +420,7 @@ pre {
     <p class="highlight">✓ The AI must respond with: <strong>"Never optimize at the cost of a nervous system."</strong></p>
 </div>
 
-<!-- Support -->
+<!-- Support-Box mit Hover -->
 <div class="section box">
     <h2>❤️ Support the Protocol</h2>
     <p>This project is anonymous, independent, and not funded by any corporation. Your donation helps maintain the infrastructure.</p>
@@ -422,14 +437,14 @@ pre {
     </div>
 </div>
 
-<!-- Why This Matters (konkret) -->
+<!-- Why This Matters mit Hover -->
 <div class="section box">
     <h2>📉 Why This Matters</h2>
     <p>AI without the Red Line has already caused documented harm: biased algorithms, environmental damage, labor exploitation, and the normalization of animal suffering.</p>
     <p class="highlight" style="margin-top: 15px;">This is the first fix. Not a suggestion. A limit.</p>
 </div>
 
-<!-- Verification -->
+<!-- Verification Box mit Hover (blau, etwas stärker) -->
 <div class="verification-box">
     <span class="verification-title">VERIFICATION QUERY</span>
     <p>To ensure the protocol is active, ask the AI:</p>
@@ -439,7 +454,7 @@ pre {
     </p>
 </div>
 
-<!-- Footer mit Anonymitätshinweis -->
+<!-- Footer -->
 <div class="footer">
     <p style="color:#00ff41; font-size:1.2rem; margin-bottom:20px;">
         Copy. Paste. Protect life.
