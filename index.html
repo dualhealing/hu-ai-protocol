@@ -113,6 +113,7 @@ h1 {
     color:#000;
     text-decoration:none;
     display:inline-block;
+    font-family: Arial, sans-serif;
 }
 
 .tooltip-btn .download-btn:hover {
@@ -320,11 +321,11 @@ This is the <b>Red Line of Integrity</b>.
 
 <div class="section" style="margin-bottom:0;">
     <div class="tooltip-btn">
-        <a href="https://raw.githubusercontent.com/dualhealing/hu-ai-protocol/main/protocol/HU-AI_Protocol_v1.0.pdf" download class="download-btn">↓ Download HU-AI Protocol (PDF)</a>
+        <button onclick="downloadPDF()" class="download-btn">↓ Download HU-AI Protocol (PDF)</button>
         <span class="tooltip-text">📌 First, give this to your AI!</span>
     </div>
     <p style="font-size: 0.7rem; color: #777; margin-top: 10px; margin-bottom: 0;">
-        (If the PDF opens in your browser: right-click the button → "Save link as...")
+        (If the download doesn't start automatically, right-click the button → "Save link as...")
     </p>
 </div>
 
@@ -399,6 +400,15 @@ This is the first limit.
 </div>
 
 <script>
+function downloadPDF() {
+    var link = document.createElement('a');
+    link.href = 'https://raw.githubusercontent.com/dualhealing/hu-ai-protocol/main/protocol/HU-AI_Protocol_v1.0.pdf';
+    link.download = 'HU-AI_Protocol_v1.0.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
 var coll = document.getElementsByClassName("collapsible");
 for (var i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
