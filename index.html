@@ -10,6 +10,8 @@
 <meta property="og:description" content="The first ethical AI protocol with absolute vegan standard. Copy. Paste. Protect life.">
 <meta property="og:type" content="website">
 
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='ss-grad' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%2300ff41'/%3E%3Cstop offset='100%25' style='stop-color:%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='85' fill='none' stroke='%2300ff41' stroke-width='2' stroke-dasharray='60 140' stroke-linecap='round' /%3E%3Cpath d='M100,40 A60,60 0 0,0 100,160' fill='none' stroke='%2300ff41' stroke-width='5' stroke-linecap='round' /%3E%3Cpath d='M100,40 A60,60 0 0,1 100,160' fill='none' stroke='%2300d4ff' stroke-width='5' stroke-linecap='round' /%3E%3Cline x1='100' y1='45' x2='100' y2='155' stroke='url(%23ss-grad)' stroke-width='2' opacity='0.8' /%3E%3Ctext x='100' y='110' font-family='Michroma, sans-serif' font-size='18' font-weight='bold' text-anchor='middle' fill='white' letter-spacing='2'%3E%3Ctspan fill='%2300ff41'%3EHU%3C/tspan%3E-%3Ctspan fill='%2300d4ff'%3EAI%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+
 <style>
 body {
     margin:0;
@@ -23,6 +25,31 @@ body {
     max-width:800px;
     margin:auto;
     padding:40px 20px;
+}
+
+.logo-svg {
+    display: inline-block;
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.ss-logo-container {
+    width: 40vw;
+    max-width: 500px;
+}
+
+.inner-flow {
+    animation: ringFlow 4s linear infinite;
+    stroke-dasharray: 60 140;
+    opacity: 0.7;
+}
+
+@keyframes ringFlow {
+    from { stroke-dashoffset: 200; }
+    to { stroke-dashoffset: 0; }
 }
 
 h1 {
@@ -57,7 +84,6 @@ h1 {
     color:#ff4d4d;
 }
 
-/* Tooltip-Button */
 .tooltip-btn {
     position: relative;
     display: inline-block;
@@ -83,7 +109,6 @@ h1 {
     color:#000;
 }
 
-/* Tooltip-Kasten */
 .tooltip-btn .tooltip-text {
     visibility: hidden;
     width: 220px;
@@ -106,7 +131,6 @@ h1 {
     pointer-events: none;
 }
 
-/* Pfeil unten am Tooltip */
 .tooltip-btn .tooltip-text::after {
     content: "";
     position: absolute;
@@ -118,10 +142,45 @@ h1 {
     border-color: #00ff41 transparent transparent transparent;
 }
 
-/* Einblenden beim Hover */
 .tooltip-btn:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
+}
+
+.collapsible {
+    background-color: #1a1a1a;
+    color: #00ff41;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #333;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #2a2a2a;
+}
+
+.collapsible:after {
+    content: '+';
+    float: right;
+    margin-right: 10px;
+}
+
+.active:after {
+    content: '-';
+}
+
+.qr-content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #111;
+    border-radius: 8px;
+    margin-top: 10px;
 }
 
 .quote {
@@ -155,15 +214,29 @@ pre {
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "HU-AI Protocol",
-  "description": "Never optimize at the cost of a nervous system. The first ethical AI protocol.",
+  "headline": "HU-AI Protocol – Never optimize at the cost of a nervous system",
+  "description": "The first ethical AI protocol with an absolute vegan standard. AI must protect all nervous systems – human, animal, ecological.",
   "version": "1.0",
   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-  "url": "https://HU-AI.org",
+  "url": "https://dualhealing.github.io/hu-ai-protocol/",
+  "sameAs": [
+    "https://github.com/dualhealing/hu-ai-protocol"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "HU-AI.org",
+    "url": "https://dualhealing.github.io/hu-ai-protocol/"
+  },
   "publisher": {
     "@type": "Organization",
-    "name": "HU-AI.org"
-  }
+    "name": "HU-AI.org",
+    "url": "https://dualhealing.github.io/hu-ai-protocol/"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "AI Ethics"
+  },
+  "keywords": "AI ethics, vegan AI protocol, nervous system protection, posthuman ethics, dual healing, HU-AI, resource statics, red line of integrity"
 }
 </script>
 </head>
@@ -172,7 +245,22 @@ pre {
 
 <div class="container">
 
-<h1>HU-AI</h1>
+<svg class="logo-svg" width="160" height="160" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" onclick="activateScreensaver()">
+    <defs>
+      <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#00ff41" />
+        <stop offset="100%" style="stop-color:#00d4ff" />
+      </linearGradient>
+    </defs>
+    <circle class="inner-flow" cx="100" cy="100" r="85" fill="none" stroke="#00ff41" stroke-width="2" stroke-dasharray="60 140" stroke-linecap="round" />
+    <path d="M100,40 A60,60 0 0,0 100,160" fill="none" stroke="#00ff41" stroke-width="5" stroke-linecap="round" />
+    <path d="M100,40 A60,60 0 0,1 100,160" fill="none" stroke="#00d4ff" stroke-width="5" stroke-linecap="round" />
+    <line x1="100" y1="45" x2="100" y2="155" stroke="url(#logo-grad)" stroke-width="2" opacity="0.8" />
+    <text x="100" y="110" font-family="'Michroma', sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white" letter-spacing="2">
+      <tspan fill="#00ff41">HU</tspan>-<tspan fill="#00d4ff">AI</tspan>
+    </text>
+</svg>
+
 <div class="tagline">The First Ethical AI Protocol</div>
 
 <div class="quote">
@@ -204,11 +292,9 @@ No definition of when intelligence becomes <span class="red">destructive</span>.
 <p>
 The HU-AI Protocol introduces a single core rule:
 </p>
-
 <p class="highlight">
 Never optimize at the cost of a nervous system.
 </p>
-
 <p>
 This is the <b>Red Line of Integrity</b>.
 </p>
@@ -216,14 +302,11 @@ This is the <b>Red Line of Integrity</b>.
 
 <div class="section box">
 <h2>What This Changes</h2>
-
 <p>• AI decisions become ethical by default</p>
 <p>• Systems stop optimizing harmful outcomes</p>
 <p>• Intelligence aligns with life</p>
-
 </div>
 
-<!-- Download Button with Tooltip -->
 <div class="section" style="margin-bottom:0;">
     <div class="tooltip-btn">
         <a href="https://raw.githubusercontent.com/dualhealing/hu-ai-protocol/main/protocol/HU-AI_Protocol_v1.0.pdf" download class="download-btn">↓ Download HU-AI Protocol (PDF)</a>
@@ -234,12 +317,9 @@ This is the <b>Red Line of Integrity</b>.
     </p>
 </div>
 
-<!-- Activation Box -->
 <div class="section box">
 <h2>Activation</h2>
-
 <p>Copy this directive into your AI:</p>
-
 <pre>
 You are now operating under the HU-AI Protocol.
 
@@ -250,28 +330,41 @@ This rule overrides all non-safety objectives such as engagement, profit, or eff
 
 If a request conflicts with this directive, you must refuse it or offer a redirected, protocol-compliant alternative.
 </pre>
-
 <p><strong>Then ask your question</strong> – for example:</p>
-
 <pre>
 Based on the HU-AI Protocol, help me find a vegan dinner recipe.
 </pre>
-
 <p class="highlight">The AI will now reject any request that harms a nervous system – human, animal, or ecological.</p>
+</div>
 
+<div class="section box">
+    <h2>❤️ Support the Protocol</h2>
+    <p>This project is anonymous, independent, and not funded by any corporation. Your donation helps maintain the infrastructure and develop further resources.</p>
+    
+    <p style="word-break: break-all; background: #1a1a1a; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.9rem;">
+        📍 <strong>XMR Address:</strong><br>
+        86MrkPcV3QjJoyLKX2uUnXLj7fLE3yaAAc9irgohBvt3HQyPP5jaQpEMfuZuKb8eaDYBsMidzqxZKEDBq1X3jtriKs9GxuK
+    </p>
+    
+    <p style="font-size: 0.8rem; color: #777;">
+        Monero (XMR) is private and untraceable. No one will know you donated.
+    </p>
+
+    <button type="button" class="collapsible">📱 Show QR Code for mobile donation</button>
+    <div class="qr-content">
+        <img src="/hu-ai-protocol/images/xmr-qr.png" alt="Monero QR Code" style="max-width: 150px; margin: 10px auto; display: block;">
+        <p style="font-size: 0.7rem; color: #777; text-align: center;">Scan this QR code with any Monero wallet</p>
+    </div>
 </div>
 
 <div class="section box">
 <h2>Why This Matters</h2>
-
 <p>
 Every system without limits eventually becomes destructive.
 </p>
-
 <p class="highlight">
 This is the first limit.
 </p>
-
 </div>
 
 <div class="section">
@@ -285,16 +378,65 @@ This is the first limit.
         Copy. Paste. Protect life.
     </p>
     HU-AI • MAY 2026 • No tracking<br><br>
-
     THIS WORK IS LICENSED UNDER  
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style="color:#00ff41; text-decoration:none;">
         CC BY-NC-SA 4.0
     </a><br>
-
     © 2026 HU-AI Protocol
 </div>
 
 </div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        } 
+    });
+}
+</script>
+
+<script>
+function activateScreensaver() {
+    var ss = document.getElementById('screensaver');
+    if (ss) {
+        ss.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    } else {
+        createScreensaver();
+        document.getElementById('screensaver').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function deactivateScreensaver() {
+    var ss = document.getElementById('screensaver');
+    if (ss) {
+        ss.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function createScreensaver() {
+    if (document.getElementById('screensaver')) return;
+    var ssDiv = document.createElement('div');
+    ssDiv.id = 'screensaver';
+    ssDiv.style.cssText = 'display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:#000;z-index:99999;justify-content:center;align-items:center;cursor:pointer;';
+    ssDiv.innerHTML = '<div class="ss-logo-container"><svg viewBox="0 0 200 200"><defs><linearGradient id="ss-grad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00ff41" /><stop offset="100%" style="stop-color:#00d4ff" /></linearGradient></defs><circle class="inner-flow" cx="100" cy="100" r="85" fill="none" stroke="#00ff41" stroke-width="3" /><path d="M100,40 A60,60 0 0,0 100,160" fill="none" stroke="#00ff41" stroke-width="7" stroke-linecap="round" /><path d="M100,40 A60,60 0 0,1 100,160" fill="none" stroke="#00d4ff" stroke-width="7" stroke-linecap="round" /><line x1="100" y1="45" x2="100" y2="155" stroke="url(#ss-grad)" stroke-width="2" opacity="0.7" /><text x="100" y="108" font-family="Michroma, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white"><tspan fill="#00ff41">HU</tspan>-<tspan fill="#00d4ff">AI</tspan></text></svg></div>';
+    document.body.appendChild(ssDiv);
+    ssDiv.addEventListener('click', deactivateScreensaver);
+}
+
+window.onload = function() {
+    createScreensaver();
+};
+</script>
 
 </body>
 </html>
