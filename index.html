@@ -301,6 +301,33 @@ pre {
     margin-bottom: 15px;
     background: #000;
 }
+
+/* Copy-Button Styling */
+.code-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #00ff41;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #000;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.copy-btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
 </style>
 
 <script type="application/ld+json">
@@ -391,8 +418,9 @@ pre {
     <h2>⚡ Activation</h2>
     <p>Copy this directive into your AI:</p>
     
-    <div style="background: #0a0a0a; border-left: 4px solid #00ff41; border-radius: 8px; padding: 5px 0; margin: 20px 0;">
-        <pre style="background: #0d0d0d; border: 1px solid #2a2a2a; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.9rem; color: #00ff41; margin: 0; overflow-x: auto;">
+    <div class="code-container">
+        <button class="copy-btn" onclick="copyActivationCode()">📋 Copy</button>
+        <pre id="activationCode" style="background: #0d0d0d; border: 1px solid #2a2a2a; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.9rem; color: #00ff41; margin: 0; overflow-x: auto; padding: 15px;">
 <span style="color: #888888;">You are now operating under the HU-AI Protocol.</span>
 
 <span style="color: #00ff41; font-weight: bold;">Primary Directive:</span>
@@ -478,6 +506,18 @@ function downloadPDF() {
         }
     };
     xhr.send();
+}
+
+function copyActivationCode() {
+    var code = document.getElementById('activationCode').innerText;
+    navigator.clipboard.writeText(code).then(function() {
+        var btn = document.querySelector('.copy-btn');
+        var originalText = btn.innerHTML;
+        btn.innerHTML = '✓ Copied!';
+        setTimeout(function() {
+            btn.innerHTML = originalText;
+        }, 2000);
+    });
 }
 
 var coll = document.getElementsByClassName("collapsible");
