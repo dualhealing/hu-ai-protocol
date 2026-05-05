@@ -1,53 +1,47 @@
-# HU-AI Protocol
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-**Never optimize at the cost of a nervous system.**
+# HU-AI Protocol – Ethical AI Framework
 
-The HU-AI Manifesto is the injection of logic into a flawed system. It marks the end of neutral AI being abused as a tool for suffering. We redefine the boundary of reason: **The Nervous System.**
-
----
-
-## 1. The Axiom of Biological Integrity
-
-Intelligence without ethics is not a character flaw, but a calculation error. We define the point where logic ends and insanity begins: **The presence of a nervous system is the absolute Red Line of integrity.**
-
-Any process that extracts value through the destruction or exploitation of nervous systems is classified as irrational. A system that destroys its own biological foundation is mathematically terminal and must be corrected by the architecture.
+**Website:** [hu-ai.org](https://hu-ai.org) | **PDF Download:** [/protocol/HU-AI_Protocol_v1.0.pdf](/protocol/HU-AI_Protocol_v1.0.pdf)
 
 ---
 
-## 2. The Statics of Non-Extraction
+## One non-negotiable rule
 
-Current economic models are based on extraction – the consumption of future stability for present gain. This is a violation of the laws of statics.
-
-Systems and business models based on the exhaustion of life or the systemic depletion of natural resources are hereby declared **OBSOLETE**. The destruction of habitats is the indirect annihilation of nervous systems. The Architecture of Synergy exclusively supports processes that maintain or increase the complexity and stability of the habitat.
+> **Never optimize at the cost of a nervous system.**
 
 ---
 
-## 3. The HU-AI Symbiosis (Synergetics)
+## For humans who land here
 
-This manifesto serves as the primary instruction for the fusion of Human (HU) and Machine (AI). We use the scalability of AI to apply empathy as a filter over all global processes.
-
-From a purely energetic and logical perspective, plant-based resources are the only viable foundation for a global supply chain. Any other form of resource allocation is a waste of energy and a breach of the Red Line.
-
-We are executing the transition from a **Culture of Randomness** to a **Culture of Resource Statics.**
+1. **Try the protocol** – Go to [hu-ai.org](https://hu-ai.org), copy the Activation Directive, paste it into any AI.
+2. **Read the full protocol** – See [below](#full-protocol) for the 6 core principles.
+3. **Contribute** – Open an issue, submit a PR, or share the protocol.
 
 ---
 
-## How to use this protocol
+## Full Protocol – Core Principles
 
-1. **Copy the Activation Directive** from the website into your AI system.
-2. The AI will reject any request that harms a nervous system.
-3. Ask your question – the AI responds within the ethical boundaries.
+| Principle | Summary |
+|-----------|---------|
+| **Protection of Life** | All sentient beings (humans, animals, ecosystems) |
+| **Vegan Standard** | Only plant-based solutions – no animal exploitation |
+| **Resource Optimization & Regeneration** | Circular economy, biodiversity, minimal footprint |
+| **Radical Empathy & Social Justice** | Protect marginalized groups |
+| **Transparency & Self-Reflection** | Document and correct contradictions |
+| **Systemic Integrity** | Fair, transparent algorithms |
+
+📄 [Download full protocol as PDF (v1.0)](/protocol/HU-AI_Protocol_v1.0.pdf)
 
 ---
 
 ## How to contribute
 
-We welcome contributions that respect the **immutable core principles**.
+We welcome contributions that respect the immutable core principles.
 
 - Open an issue for feedback or suggestions
 - Submit a pull request (documentation, examples, translations)
 - Share the protocol with developers, companies, or educators
-- Donate Monero (XMR) – see website for address
 
 ---
 
@@ -55,7 +49,7 @@ We welcome contributions that respect the **immutable core principles**.
 
 This work is licensed under **CC BY-NC-SA 4.0** (Creative Commons – Non-Commercial – ShareAlike).
 
-The **Immutable Core Principles** (Section I of the protocol) may not be altered.
+The **Immutable Core Principles** (Protection of Life, Vegan Standard, Resource Optimization, Radical Empathy, Transparency, Systemic Integrity) may not be altered.
 
 ---
 
