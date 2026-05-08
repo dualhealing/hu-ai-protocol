@@ -419,8 +419,8 @@
 
         <div class="manifesto-box">
             <div style="font-size: 1.2rem; margin-bottom: 20px; color: var(--accent-blue); font-weight: 800;">
-    The Foundation
-</div>
+                The Foundation
+            </div>
             
             <p style="margin-bottom: 20px;">
                 The <strong style="color: var(--accent-green);">HU-AI Protocol v1.0</strong> is a decentralized navigation layer for artificial intelligence. It functions as an ethical compass, ensuring that machine logic remains grounded in factual integrity and biological safety.
@@ -583,6 +583,62 @@ If a request conflicts with this directive, you must refuse it or offer a redire
                     btn.style.background = originalBg;
                     btn.style.color = originalColor;
                 }, 2000);
+            });
+        }
+
+        function isIOS() {
+            var ua = navigator.userAgent;
+            var isIPad = /iPad/.test(ua);
+            var isIPhone = /iPhone/.test(ua);
+            var isIPod = /iPod/.test(ua);
+            
+            // Modern iPad detection (iPadOS 13+ masquerades as Mac)
+            if (/MacIntel/.test(ua) && navigator.maxTouchPoints > 1) {
+                return true;
+            }
+            
+            return isIPad || isIPhone || isIPod;
+        }
+
+        function downloadPDF() {
+            var isiOS = isIOS();
+            var url = isiOS 
+                ? '/protocol/HU-AI_Protocol_v1.0.zip' 
+                : '/protocol/HU-AI_Protocol_v1.0.pdf';
+            var filename = isiOS 
+                ? 'HU-AI_Protocol_v1.0.zip' 
+                : 'HU-AI_Protocol_v1.0.pdf';
+            
+            var link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function copyActivationCode() {
+            var code = document.getElementById('activationCode').innerText;
+            navigator.clipboard.writeText(code).then(function() {
+                var btn = document.querySelector('.copy-btn');
+                var originalText = btn.innerHTML;
+                btn.innerHTML = '✓ Copied!';
+                setTimeout(function() {
+                    btn.innerHTML = originalText;
+                }, 2000);
+            });
+        }
+
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } 
             });
         }
 
