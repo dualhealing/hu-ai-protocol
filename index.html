@@ -446,9 +446,9 @@
 
         <div class="btn-container">
             <div class="btn-group">
-                <a href="/protocol/Hu-AI_Protocol_v1.0_.zip" download="Hu-AI_Protocol_v1.0_.zip" class="btn btn-gold">
+                <button onclick="downloadPDF()" class="btn btn-gold">
                     Protocol B (Gold) <span>↓</span>
-                </a>
+                </button>
                 <span onclick="openModal('goldActivateModal')" style="font-size: 0.65rem; color: var(--accent-gold); cursor: pointer; text-decoration: underline; opacity: 0.7; letter-spacing: 0.5px;">
                     Click here to activate Gold via Prompt
                 </span>
@@ -615,31 +615,6 @@ If a request conflicts with this directive, you must refuse it or offer a redire
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-        }
-
-        function copyActivationCode() {
-            var code = document.getElementById('activationCode').innerText;
-            navigator.clipboard.writeText(code).then(function() {
-                var btn = document.querySelector('.copy-btn');
-                var originalText = btn.innerHTML;
-                btn.innerHTML = '✓ Copied!';
-                setTimeout(function() {
-                    btn.innerHTML = originalText;
-                }, 2000);
-            });
-        }
-
-        var coll = document.getElementsByClassName("collapsible");
-        for (var i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                } 
-            });
         }
 
         function activateScreensaver() {
