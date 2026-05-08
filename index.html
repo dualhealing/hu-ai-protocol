@@ -356,19 +356,6 @@
             margin: 20px 0;
         }
 
-        .qr-code {
-            background: white;
-            padding: 10px;
-            border-radius: 12px;
-            display: inline-block;
-        }
-
-        .qr-code svg {
-            width: 180px;
-            height: 180px;
-            display: block;
-        }
-
         .support-thanks {
             background: rgba(242, 104, 34, 0.15);
             padding: 12px;
@@ -388,7 +375,6 @@
                 width: 70vw;
                 max-width: 350px;
             }
-            .qr-code svg { width: 140px; height: 140px; }
         }
     </style>
 </head>
@@ -427,18 +413,19 @@
             </div>
         </div>
 
-       <div class="btn-container">
-    <div class="btn-group">
-        <a href="/protocol/HU-AI_Protocol_v1.0.pdf" download="HU-AI_Protocol_v1.0.pdf" class="btn btn-gold">
-            Protocol B (Gold) <span>↓</span>
-        </a>
-        <span onclick="openModal('goldActivateModal')" style="font-size: 0.65rem; color: var(--accent-gold); cursor: pointer; text-decoration: underline; opacity: 0.7; letter-spacing: 0.5px;">
-            Click here to activate Gold via Prompt
-        </span>
-    </div>
+        <div class="btn-container">
+            <div class="btn-group">
+                <a href="/protocol/Hu-AI_Protocol_v1.0_.zip" download="Hu-AI_Protocol_v1.0_.zip" class="btn btn-gold">
+                    Protocol B (Gold) <span>↓</span>
+                </a>
+                <span onclick="openModal('goldActivateModal')" style="font-size: 0.65rem; color: var(--accent-gold); cursor: pointer; text-decoration: underline; opacity: 0.7; letter-spacing: 0.5px;">
+                    Click here to activate Gold via Prompt
+                </span>
+            </div>
 
-    <button class="btn btn-secondary" onclick="openModal('protocolModal')">Protocol A (Simplified)</button>
-</div>
+            <button class="btn btn-secondary" onclick="openModal('protocolModal')">Protocol A (Simplified)</button>
+        </div>
+
         <footer>
             <span class="footer-highlight">Copy. Paste. Protect life.</span><br><br>
             🧬 Decentralized Framework • No Tracking • hello@hu-ai.org<br>
@@ -503,10 +490,8 @@ If a request conflicts with this directive, you must refuse it or offer a redire
             </p>
             
             <!-- QR Code -->
-<div class="qr-container">
-    <img src="images/xmr-qr.png" alt="Monero QR Code" style="width: 180px; max-width: 100%; border-radius: 12px;">
-    <p style="font-size: 0.7rem; opacity: 0.6;">Scan with any Monero wallet</p>
-</div>
+            <div class="qr-container">
+                <img src="images/xmr-qr.png" alt="Monero QR Code" style="width: 180px; max-width: 100%; border-radius: 12px;">
                 <p style="font-size: 0.7rem; opacity: 0.6;">Scan with any Monero wallet</p>
             </div>
             
