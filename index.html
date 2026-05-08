@@ -276,15 +276,17 @@
 
         .modal-content {
             background-color: #0d0d0d;
-            margin: 10% auto;
+            margin: 5% auto;
             padding: 30px;
             border: 1px solid var(--accent-blue);
-            width: 85%;
+            width: 90%;
             max-width: 500px;
             border-radius: 10px;
             position: relative;
             text-align: center;
             box-shadow: 0 0 60px rgba(0, 212, 255, 0.1);
+            max-height: 85vh;
+            overflow-y: auto;
         }
 
         .close-btn {
@@ -396,6 +398,27 @@
             .ss-logo-container { 
                 width: 70vw;
                 max-width: 350px;
+            }
+            
+            /* Mobile Modal Fix */
+            .modal-content {
+                margin: 10% auto;
+                max-height: 80vh;
+                overflow-y: auto;
+                padding: 20px;
+                width: 92%;
+            }
+            
+            .code-box {
+                max-height: 250px;
+                overflow-y: auto;
+                font-size: 0.75rem;
+                padding: 15px;
+            }
+            
+            .copy-btn {
+                margin-top: 15px;
+                padding: 12px;
             }
         }
     </style>
