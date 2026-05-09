@@ -144,8 +144,35 @@
             letter-spacing: 6px;
             opacity: 0.8;
             text-transform: uppercase;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             font-weight: 400;
+        }
+
+        .invitation-text {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+        }
+
+        .invitation-text p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .invitation-text p:first-of-type {
+            opacity: 0.9;
+        }
+
+        .invitation-text p:nth-of-type(2) {
+            opacity: 0.85;
+            margin-top: 20px;
+        }
+
+        .invitation-text p:last-of-type {
+            font-size: 1.1rem;
+            margin-top: 25px;
+            color: var(--accent-green);
+            font-style: italic;
         }
 
         .manifesto-box {
@@ -415,6 +442,64 @@
                 padding: 12px;
             }
         }
+
+        /* HU-AI Styling für Monero-Modal */
+        #xmrModal .modal-content {
+            border-top: 3px solid #00ff41;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
+        }
+
+        #xmrModal .qr-container img {
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 16px;
+            padding: 4px;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        #xmrModal .modal-content h3 {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+
+        #xmrModal .modal-content h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, #00ff41, #00d4ff);
+        }
+
+        #xmrModal .copy-btn {
+            background: transparent;
+            border: 1px solid #00d4ff;
+            color: #00d4ff;
+            transition: all 0.3s ease;
+        }
+
+        #xmrModal .copy-btn:hover {
+            background: #00d4ff;
+            color: #000;
+            box-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
+        }
+
+        #xmrModal .close-btn:hover {
+            color: #00ff41;
+            text-shadow: 0 0 6px rgba(0, 255, 65, 0.4);
+        }
+
+        #xmrModal .code-box {
+            border-left: 3px solid #00ff41;
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+            background: rgba(0, 0, 0, 0.6);
+        }
     </style>
 </head>
 <body>
@@ -433,6 +518,13 @@
 
         <span class="version-badge">Protocol v1.0</span>
         <div class="tagline">Architecture of Synergy</div>
+
+        <!-- Neue Einladungstexte direkt unter dem Tagline -->
+        <div class="invitation-text">
+            <p>The <span style="color: var(--accent-green); font-weight: bold;">HU</span>-<span style="color: var(--accent-blue); font-weight: bold;">AI</span> protocol is the first ethical AI operating system that ensures decisions are made not only intelligently but also wisely, ethically consistently, and in the protection of all life.</p>
+            <p>Universal Autonomy: Total anonymity is a core architectural principle, ensuring the protocol remains open, neutral, and independent of corporate or national control.</p>
+            <p>We invite you to become part of the structure.</p>
+        </div>
 
         <div class="manifesto-box">
             <div class="feature-grid">
@@ -516,7 +608,7 @@ If a request conflicts with this directive, you must refuse it or offer a redire
 
     <!-- Modal Monero with QR Code -->
     <div id="xmrModal" class="modal">
-        <div class="modal-content" style="border-color: var(--accent-xmr);">
+        <div class="modal-content">
             <span class="close-btn" onclick="closeModal('xmrModal')">&times;</span>
             <h3 style="color:var(--accent-xmr); text-transform:uppercase; font-size: 0.9rem; font-family: var(--font-brand);">Anonymous Support</h3>
             <p style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 10px;">
@@ -531,7 +623,7 @@ If a request conflicts with this directive, you must refuse it or offer a redire
             </div>
             
             <div id="xmr-address" class="code-box" style="color: var(--accent-xmr); font-size: 0.7rem; word-break: break-all;">86MrkPcV3QjJoyLKX2uUnXLj7fLE3yaAAc9irgohBvt3HQyPP5jaQpEMfuZuKb8eaDYBsMidzqxZKEDBq1X3jtriKs9GxuK</div>
-            <button class="copy-btn" onclick="copyText('xmr-address', this)" style="background: var(--accent-xmr);">Copy XMR Address</button>
+            <button class="copy-btn" onclick="copyText('xmr-address', this)">Copy XMR Address</button>
             
             <div class="support-thanks">
                 🙏 Every donation helps keep the protocol alive and independent.
