@@ -540,7 +540,7 @@
 
         <div class="btn-container">
             <div class="btn-group">
-                <button onclick="downloadPDF()" class="btn btn-gold">
+                <button onclick="downloadZip()" class="btn btn-gold">
                     Protocol B (Gold) <span>↓</span>
                 </button>
                 <span onclick="openModal('goldActivateModal')" style="font-size: 0.65rem; color: var(--accent-gold); cursor: pointer; text-decoration: underline; opacity: 0.7; letter-spacing: 0.5px;">
@@ -680,11 +680,10 @@ If a request conflicts with this directive, you must refuse it or offer a redire
             });
         }
 
-        function downloadPDF() {
-            var url = '/protocol/HU-AI_Protocol_v1.0.pdf';
-            var filename = 'HU-AI_Protocol_v1.0.pdf';
+        function downloadZip() {
+            var url = '/protocol/HU-AI_Protocol_v1.0.zip';
+            var filename = 'HU-AI_Protocol_v1.0.zip';
             
-            // Erzwingt den "Speichern unter"-Dialog
             var link = document.createElement('a');
             link.href = url;
             link.download = filename;
