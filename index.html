@@ -684,28 +684,14 @@ If a request conflicts with this directive, you must refuse it or offer a redire
             var url = '/protocol/HU-AI_Protocol_v1.0.pdf';
             var filename = 'HU-AI_Protocol_v1.0.pdf';
             
-            fetch(url)
-                .then(response => response.blob())
-                .then(blob => {
-                    const blobUrl = window.URL.createObjectURL(blob);
-                    const link = document.createElement('a');
-                    link.href = blobUrl;
-                    link.download = filename;
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                    window.URL.revokeObjectURL(blobUrl);
-                })
-                .catch(error => {
-                    // Fallback: Direkter Link
-                    const link = document.createElement('a');
-                    link.href = url;
-                    link.download = filename;
-                    link.target = '_blank';
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                });
+            // Erzwingt den "Speichern unter"-Dialog
+            var link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            link.setAttribute('download', filename);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
 
         function activateScreensaver() {
