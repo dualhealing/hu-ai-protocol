@@ -564,7 +564,6 @@
             <path d="M121.7 392.5v-195L250 325.8l128.3-128.3v195h81.3V107.5h-81.3L250 235.8 121.7 107.5H40.4v285h81.3z"/>
         </svg>
         Support
-        
     </div>
 
     <!-- Modal Protocol A -->
@@ -681,35 +680,32 @@ If a request conflicts with this directive, you must refuse it or offer a redire
             });
         }
 
-        function isIOS() {
-            var ua = navigator.userAgent;
-            var isIPad = /iPad/.test(ua);
-            var isIPhone = /iPhone/.test(ua);
-            var isIPod = /iPod/.test(ua);
-            
-            // Modern iPad detection (iPadOS 13+ masquerades as Mac)
-            if (/MacIntel/.test(ua) && navigator.maxTouchPoints > 1) {
-                return true;
-            }
-            
-            return isIPad || isIPhone || isIPod;
-        }
-
         function downloadPDF() {
-            var isiOS = isIOS();
-            var url = isiOS 
-                ? '/protocol/HU-AI_Protocol_v1.0.zip' 
-                : '/protocol/HU-AI_Protocol_v1.0.pdf';
-            var filename = isiOS 
-                ? 'HU-AI_Protocol_v1.0.zip' 
-                : 'HU-AI_Protocol_v1.0.pdf';
+            var url = '/protocol/HU-AI_Protocol_v1.0.pdf';
+            var filename = 'HU-AI_Protocol_v1.0.pdf';
             
-            var link = document.createElement('a');
-            link.href = url;
-            link.download = filename;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            fetch(url)
+                .then(response => response.blob())
+                .then(blob => {
+                    const blobUrl = window.URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = blobUrl;
+                    link.download = filename;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    window.URL.revokeObjectURL(blobUrl);
+                })
+                .catch(error => {
+                    // Fallback: Direkter Link
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = filename;
+                    link.target = '_blank';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
         }
 
         function activateScreensaver() {
