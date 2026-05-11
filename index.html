@@ -235,7 +235,7 @@ If a request conflicts with this directive, refuse it or offer a protocol-compli
             <h3 style="color:var(--accent-xmr); font-size:0.9rem; font-family:var(--font-brand);">Anonymous Support</h3>
             <p>Your donation secures the HU-AI infrastructure.<br><strong style="color:var(--accent-green);">Thank you for your trust.</strong></p>
             <div class="qr-container">
-                <img src="images/xmr-qr.png" alt="Monero QR Code" style="width:180px; max-width:100%; border-radius:12px;">
+                <img src="/hu-ai-protocol/images/xmr-qr.png" alt="Monero QR Code" style="width:180px; max-width:100%; border-radius:12px;">
                 <p style="font-size:0.7rem; opacity:0.6;">Scan with any Monero wallet</p>
             </div>
             <div id="xmr-address" class="code-box" style="color:var(--accent-xmr); font-size:0.7rem;">86MrkPcV3QjJoyLKX2uUnXLj7fLE3yaAAc9irgohBvt3HQyPP5jaQpEMfuZuKb8eaDYBsMidzqxZKEDBq1X3jtriKs9GxuK</div>
@@ -273,25 +273,29 @@ If a request conflicts with this directive, refuse it or offer a protocol-compli
             var url = '/protocol/HU-AI_Protocol_v1.0.pdf';
             var filename = 'HU-AI_Protocol_v1.0.pdf';
             
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) throw new Error('PDF not found (HTTP ' + response.status + ')');
-                    return response.blob();
-                })
-                .then(blob => {
-                    const blobUrl = window.URL.createObjectURL(blob);
-                    const link = document.createElement('a');
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.responseType = 'arraybuffer';
+            
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
+                    var blobUrl = window.URL.createObjectURL(blob);
+                    var link = document.createElement('a');
                     link.href = blobUrl;
                     link.download = filename;
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
                     window.URL.revokeObjectURL(blobUrl);
-                })
-                .catch(error => {
-                    console.error('Download error:', error);
-                    alert('PDF file not found.\nPlease ensure the file exists at:\n' + url);
-                });
+                } else {
+                    alert('PDF not found. Status: ' + xhr.status);
+                }
+            };
+            xhr.onerror = function() {
+                alert('Download failed. Please check if the file exists at: ' + url);
+            };
+            xhr.send();
         }
         function activateScreensaver() {
             var ss = document.getElementById('screensaver');
