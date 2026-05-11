@@ -155,6 +155,65 @@
         .ss-logo-container { width: 50vw; max-width: 500px; animation: bioPuls 4s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
         .qr-container { display: flex; flex-direction: column; align-items: center; gap: 15px; margin: 20px 0; }
         .support-thanks { background: rgba(242,104,34,0.15); padding: 12px; border-radius: 8px; font-size: 0.8rem; margin-top: 20px; }
+
+        /* HU-AI Styling für Monero-Modal (aus der alten Version) */
+        #xmrModal .modal-content {
+            border-top: 3px solid #00ff41;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
+        }
+
+        #xmrModal .qr-container img {
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 16px;
+            padding: 4px;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        #xmrModal .modal-content h3 {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+
+        #xmrModal .modal-content h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, #00ff41, #00d4ff);
+        }
+
+        #xmrModal .copy-btn {
+            background: transparent;
+            border: 1px solid #00d4ff;
+            color: #00d4ff;
+            transition: all 0.3s ease;
+        }
+
+        #xmrModal .copy-btn:hover {
+            background: #00d4ff;
+            color: #000;
+            box-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
+        }
+
+        #xmrModal .close-btn:hover {
+            color: #00ff41;
+            text-shadow: 0 0 6px rgba(0, 255, 65, 0.4);
+        }
+
+        #xmrModal .code-box {
+            border-left: 3px solid #00ff41;
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
         @media (max-width: 600px) {
             body { font-size: 16px; }
             .logo-svg { width: 180px; }
@@ -245,13 +304,17 @@ If a request conflicts with this directive, refuse it or offer a protocol-compli
         </div>
     </div>
 
+    
     <div id="xmrModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('xmrModal')">&times;</span>
-            <h3 style="color:var(--accent-xmr); font-size:0.9rem; font-family:var(--font-brand);">Anonymous Support</h3>
-            <p>Your donation secures the HU-AI infrastructure.<br><strong style="color:var(--accent-green);">Thank you for your trust.</strong></p>
+            <h3 style="color:var(--accent-xmr); text-transform:uppercase; font-size:0.9rem; font-family:var(--font-brand);">Anonymous Support</h3>
+            <p style="font-size:0.75rem; opacity:0.8; margin-bottom:10px;">
+                Your donation secures the HU-AI infrastructure.<br>
+                <strong style="color:var(--accent-green);">Thank you for your trust.</strong>
+            </p>
             <div class="qr-container">
-                             <img src="/images/xmr-qr.png" alt="Monero QR Code" style="width:180px; max-width:100%; border-radius:12px;">
+                <img src="/images/xmr-qr.png" alt="Monero QR Code" style="width:180px; max-width:100%; border-radius:12px;">
                 <p style="font-size:0.7rem; opacity:0.6;">Scan with any Monero wallet</p>
             </div>
             <div id="xmr-address" class="code-box" style="color:var(--accent-xmr); font-size:0.7rem;">86MrkPcV3QjJoyLKX2uUnXLj7fLE3yaAAc9irgohBvt3HQyPP5jaQpEMfuZuKb8eaDYBsMidzqxZKEDBq1X3jtriKs9GxuK</div>
@@ -288,11 +351,9 @@ If a request conflicts with this directive, refuse it or offer a protocol-compli
         function downloadPDF() {
             var url = '/protocol/HU-AI_Protocol_v1.0.pdf';
             var filename = 'HU-AI_Protocol_v1.0.pdf';
-
             var xhr = new XMLHttpRequest();
             xhr.open('GET', url, true);
             xhr.responseType = 'arraybuffer';
-
             xhr.onload = function() {
                 if (xhr.status === 200) {
                     var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
@@ -330,4 +391,3 @@ If a request conflicts with this directive, refuse it or offer a protocol-compli
     </script>
 </body>
 </html>
-
