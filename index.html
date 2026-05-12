@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <title>HU-AI | Architecture of Synergy</title>
-    <meta name="description" content="HU-AI Protocol – Never optimize at the cost of a nervous system. The first ethical AI framework. Open, neutral, anonymous.">
+    <title>HU-AI | Ethical Framework for AI</title>
+    <meta name="description" content="HU-AI Protocol – Never optimize at the cost of a nervous system. A free, open ethical framework for AI. No tracking. No login.">
     <meta name="keywords" content="AI ethics, HU-AI, nervous system protection, integrity core">
     <meta name="author" content="HU-AI Collective">
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="HU-AI | Architecture of Synergy">
-    <meta property="og:description" content="HU-AI Protocol – Never optimize at the cost of a nervous system. The first ethical AI framework. Open, neutral, anonymous.">
+    <meta property="og:title" content="HU-AI | Ethical Framework for AI">
+    <meta property="og:description" content="HU-AI Protocol – Never optimize at the cost of a nervous system. A free, open ethical framework for AI. No tracking. No login.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dualhealing.github.io/hu-ai-protocol/">
     <meta property="og:image" content="https://dualhealing.github.io/hu-ai-protocol/og-image.png">
     <meta property="og:site_name" content="HU-AI Protocol">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HU-AI | Architecture of Synergy">
-    <meta name="twitter:description" content="HU-AI Protocol – Never optimize at the cost of a nervous system. The first ethical AI framework. Open, neutral, anonymous.">
+    <meta name="twitter:title" content="HU-AI | Ethical Framework for AI">
+    <meta name="twitter:description" content="HU-AI Protocol – Never optimize at the cost of a nervous system. A free, open ethical framework for AI. No tracking. No login.">
     <meta name="twitter:image" content="https://dualhealing.github.io/hu-ai-protocol/og-image.png">
 
+    <!-- Original Favicons -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%2300ff41'/%3E%3Cstop offset='100%25' style='stop-color:%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='85' fill='none' stroke='%2300ff41' stroke-width='2' stroke-dasharray='60 140' stroke-linecap='round'/%3E%3Cpath d='M100,40 A60,60 0 0,0 100,160' fill='none' stroke='%2300ff41' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M100,40 A60,60 0 0,1 100,160' fill='none' stroke='%2300d4ff' stroke-width='5' stroke-linecap='round'/%3E%3Cline x1='100' y1='45' x2='100' y2='155' stroke='url(%23grad)' stroke-width='2' opacity='0.8'/%3E%3Ctext x='100' y='108' font-family='Michroma,sans-serif' font-size='20' font-weight='bold' text-anchor='middle' fill='white'%3E%3Ctspan fill='%2300ff41'%3EHU%3C/tspan%3E-%3Ctspan fill='%2300d4ff'%3EAI%3C/tspan%3E%3C/text%3E%3C/svg%3E">
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2300ff41'/%3E%3Ctext x='16' y='22' font-size='14' text-anchor='middle' fill='%23000' font-weight='bold'%3EHA%3C/text%3E%3C/svg%3E">
     <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Ccircle cx='90' cy='90' r='90' fill='%2300ff41'/%3E%3Ctext x='90' y='115' font-size='40' text-anchor='middle' fill='%23000' font-weight='bold' font-family='Michroma'%3EHA%3C/text%3E%3C/svg%3E">
@@ -33,8 +34,8 @@
     {
         "@context": "https://schema.org",
         "@type": "TechArticle",
-        "headline": "HU-AI Protocol – Architecture of Synergy",
-        "description": "Never optimize at the cost of a nervous system. The first ethical AI framework. Open, neutral, anonymous.",
+        "headline": "HU-AI Protocol – Ethical Framework for AI",
+        "description": "Never optimize at the cost of a nervous system. A free, open ethical framework for AI.",
         "version": "1.0",
         "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
         "url": "https://dualhealing.github.io/hu-ai-protocol/",
@@ -45,348 +46,590 @@
     }
     </script>
 
-    <link href="https://fonts.bunny.net/css2?family=Michroma&family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Michroma&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg-color: #05070a;
-            --text-color: #e0e0e0;
-            --accent-green: #00ff41;
-            --accent-blue: #00d4ff;
-            --accent-gold: #d4af37;
+            --bg-color: #faf9f6;
+            --surface-color: #ffffff;
+            --text-color: #1a1a1a;
+            --text-muted: #5a5a5a;
+            --accent-green: #00a03e;
+            --accent-green-light: #e6f4ea;
+            --accent-blue: #0077b6;
+            --accent-gold: #c9a03d;
             --accent-xmr: #f26822;
-            --font-main: 'Montserrat', sans-serif;
+            --border-light: #e8e8e8;
+            --font-main: 'Inter', sans-serif;
             --font-brand: 'Michroma', sans-serif;
         }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            background-image: linear-gradient(180deg, #05070a 0%, #1a0a05 40%, #2a1508 70%, #3d2010 100%);
-            background-attachment: fixed;
+            background: var(--bg-color);
             color: var(--text-color);
             font-family: var(--font-main);
             display: flex;
             flex-direction: column;
             align-items: center;
-            overflow-x: hidden;
-            min-height: 100vh;
+            line-height: 1.6;
             font-size: 18px;
-            line-height: 1.7;
         }
+        
         .container {
-            max-width: 850px;
+            max-width: 880px;
             width: 90%;
-            padding: 20px 20px 40px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
+            padding: 40px 20px 60px;
         }
+        
+        .logo-area {
+            text-align: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        
+        .logo-svg {
+            width: 140px;
+            height: auto;
+            transition: transform 0.2s ease;
+        }
+        
+        .logo-svg:hover {
+            transform: scale(1.02);
+        }
+        
+        .inner-flow {
+            animation: ringFlow 4s linear infinite;
+            stroke-dasharray: 60 140;
+            opacity: 0.5;
+        }
+        
+        @keyframes ringFlow {
+            from { stroke-dashoffset: 200; }
+            to { stroke-dashoffset: 0; }
+        }
+        
+        .version-badge {
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        
+        .tagline {
+            text-align: center;
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+        
+        .hero {
+            background: var(--surface-color);
+            border-radius: 28px;
+            padding: 45px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-light);
+        }
+        
+        .hero h1 {
+            font-family: var(--font-brand);
+            font-size: 1.6rem;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .hero-highlight {
+            color: var(--accent-green);
+        }
+        
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--text-color);
+            margin-bottom: 25px;
+        }
+        
+        .how-it-works {
+            background: var(--accent-green-light);
+            border-radius: 20px;
+            padding: 25px;
+            margin-top: 15px;
+        }
+        
+        .how-it-works p {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .feature-card {
+            background: var(--surface-color);
+            border-radius: 20px;
+            padding: 28px;
+            border: 1px solid var(--border-light);
+            transition: all 0.2s ease;
+        }
+        
+        .feature-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            transform: translateY(-2px);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--accent-green);
+        }
+        
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .btn {
+            cursor: pointer;
+            padding: 14px 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 40px;
+            transition: all 0.2s;
+            font-size: 0.85rem;
+            border: none;
+            font-family: var(--font-main);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        
+        .btn-gold {
+            background: var(--accent-gold);
+            color: #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        
+        .btn-gold:hover {
+            background: #b88a2e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(201,160,61,0.25);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--border-light);
+            color: var(--text-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--surface-color);
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+            transform: translateY(-2px);
+        }
+        
+        .small-link {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            text-decoration: underline;
+            opacity: 0.7;
+        }
+        
+        .small-link:hover {
+            color: var(--accent-green);
+        }
+        
+        footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-light);
+            padding-top: 40px;
+            margin-top: 20px;
+        }
+        
+        .footer-highlight {
+            color: var(--accent-green);
+            font-weight: 500;
+        }
+        
+        .monero-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--surface-color);
+            border: 1px solid var(--border-light);
+            border-radius: 50px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-xmr);
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 900;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            cursor: pointer;
+        }
+        
+        .monero-float:hover {
+            background: var(--accent-xmr);
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(242,104,34,0.2);
+        }
+        
+        .monero-icon {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            backdrop-filter: blur(4px);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: var(--surface-color);
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 1px solid var(--border-light);
+        }
+        
+        .close-btn {
+            position: absolute;
+            right: 20px; top: 15px;
+            color: #999;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .code-box {
+            background: #f5f5f0;
+            color: var(--accent-green);
+            padding: 18px;
+            border-radius: 16px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            text-align: left;
+            margin-top: 15px;
+            white-space: pre-wrap;
+            word-break: break-word;
+            line-height: 1.5;
+            border: 1px solid var(--border-light);
+        }
+        
+        .copy-btn {
+            margin-top: 20px;
+            width: 100%;
+            background: var(--accent-green);
+            color: #fff;
+            border: none;
+            padding: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 40px;
+            font-family: var(--font-main);
+            transition: background 0.2s;
+        }
+        
+        .copy-btn:hover {
+            background: #008a35;
+        }
+        
+        .qr-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        
+        .qr-container img {
+            width: 160px;
+            border-radius: 16px;
+            border: 1px solid var(--border-light);
+            padding: 6px;
+            background: #fff;
+        }
+        
+        .support-thanks {
+            background: #f5f5f0;
+            padding: 12px;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            margin-top: 20px;
+            color: var(--text-muted);
+        }
+        
+        #screensaver {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: var(--bg-color);
+            z-index: 99999;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .ss-logo-container {
+            width: 50vw;
+            max-width: 500px;
+            animation: bioPuls 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+        
         @keyframes bioPuls {
             0% { filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.2)); transform: scale(1); }
             50% { filter: drop-shadow(0 0 25px rgba(0, 212, 255, 0.4)); transform: scale(1.02); }
             100% { filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.2)); transform: scale(1); }
         }
-        @keyframes ringFlow { from { stroke-dashoffset: 200; } to { stroke-dashoffset: 0; } }
-        .inner-flow { animation: ringFlow 4s linear infinite; stroke-dasharray: 60 140; opacity: 0.5; }
-        .logo-area { height: 280px; display: flex; align-items: center; justify-content: center; margin-top: 20px; cursor: pointer; }
-        .logo-svg { width: 220px; height: auto; animation: bioPuls 4s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
-        .version-badge { font-size: 0.7rem; opacity: 0.5; letter-spacing: 3px; margin-top: -10px; margin-bottom: 10px; display: block; text-transform: uppercase; }
-        .tagline { font-size: 1.1rem; letter-spacing: 6px; opacity: 0.8; text-transform: uppercase; margin-bottom: 30px; font-weight: 400; }
-        .invitation-text { text-align: center; max-width: 700px; margin: 0 auto 50px auto; }
-        .invitation-text p { font-size: 1rem; line-height: 1.7; }
-        .invitation-text p:first-of-type { opacity: 0.9; }
-        .invitation-text p:nth-of-type(2) { opacity: 0.85; margin-top: 20px; }
-        .invitation-text p:last-of-type { font-size: 1.1rem; margin-top: 25px; color: var(--accent-green); font-style: italic; }
-        .manifesto-box {
-            background: rgba(13, 13, 13, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 45px;
-            text-align: left;
-            color: #f0f0f0;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            width: 100%;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            font-size: 1.05rem;
-        }
-        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 0; }
-        .feature-item { border-left: 3px solid var(--accent-blue); padding-left: 18px; font-size: 1rem; line-height: 1.6; }
-        .feature-title { color: var(--accent-blue); font-weight: 800; display: block; margin-bottom: 8px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; }
-        .btn-container { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
-        .btn-group { display: flex; flex-direction: column; gap: 8px; align-items: center; }
-        .btn {
-            cursor: pointer;
-            padding: 18px 35px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 4px;
-            transition: all 0.4s;
-            font-size: 0.85rem;
-            border: 1px solid transparent;
-            font-family: var(--font-main);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            height: 60px;
-            white-space: nowrap;
-        }
-        .btn-gold { background: var(--accent-gold); color: #000; }
-        .btn-gold:hover { background: #f1c40f; box-shadow: 0 0 30px rgba(212, 175, 55, 0.4); transform: translateY(-2px); }
-        .btn-secondary { border: 1px solid var(--text-color); color: var(--text-color); background: transparent; }
-        .btn-secondary:hover { background: #fff; color: #000; }
-        .monero-float {
-            position: fixed; bottom: 30px; right: 30px; background: #000; border: 1px solid var(--accent-xmr);
-            border-radius: 50px; padding: 12px 22px; display: flex; align-items: center; gap: 10px;
-            color: var(--accent-xmr); font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
-            z-index: 900; transition: all 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.6); cursor: pointer;
-        }
-        .monero-float:hover { background: var(--accent-xmr); color: #000; transform: translateY(-3px); }
-        .monero-icon { width: 18px; height: 18px; fill: currentColor; }
-        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.92); backdrop-filter: blur(8px); }
-        .modal-content { background-color: #0d0d0d; margin: 5% auto; padding: 30px; border: 1px solid var(--accent-blue); width: 90%; max-width: 500px; border-radius: 10px; position: relative; text-align: center; box-shadow: 0 0 60px rgba(0,212,255,0.1); max-height: 85vh; overflow-y: auto; }
-        .close-btn { position: absolute; right: 20px; top: 15px; color: #555; font-size: 24px; cursor: pointer; }
-        .code-box { background: #000; color: var(--accent-green); padding: 20px; border: 1px solid #222; font-family: 'Courier New', monospace; font-size: 0.85rem; text-align: left; margin-top: 15px; white-space: pre-wrap; word-break: break-word; line-height: 1.5; }
-        .copy-btn { margin-top: 20px; width: 100%; background: var(--accent-blue); color: #000; border: none; padding: 15px; font-weight: 800; cursor: pointer; border-radius: 4px; text-transform: uppercase; font-family: var(--font-main); }
-        footer { margin-top: 70px; padding-bottom: 40px; font-size: 0.7rem; opacity: 0.5; letter-spacing: 1px; text-align: center; line-height: 1.6; }
-        .footer-highlight { color: var(--accent-green); font-weight: bold; text-transform: uppercase; }
-        #screensaver { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #000; z-index: 99999; justify-content: center; align-items: center; cursor: pointer; }
-        .ss-logo-container { width: 50vw; max-width: 500px; animation: bioPuls 4s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
-        .qr-container { display: flex; flex-direction: column; align-items: center; gap: 15px; margin: 20px 0; }
-        .support-thanks { background: rgba(242,104,34,0.15); padding: 12px; border-radius: 8px; font-size: 0.8rem; margin-top: 20px; }
-
-        /* HU-AI Styling für Monero-Modal (aus der alten Version) */
-        #xmrModal .modal-content {
-            border-top: 3px solid #00ff41;
-            border-left: none;
-            border-right: none;
-            border-bottom: none;
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
-        }
-
-        #xmrModal .qr-container img {
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            border-radius: 16px;
-            padding: 4px;
-            background: rgba(0, 0, 0, 0.4);
-        }
-
-        #xmrModal .modal-content h3 {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 6px;
-        }
-
-        #xmrModal .modal-content h3:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 25%;
-            width: 50%;
-            height: 2px;
-            background: linear-gradient(90deg, #00ff41, #00d4ff);
-        }
-
-        #xmrModal .copy-btn {
-            background: transparent;
-            border: 1px solid #00d4ff;
-            color: #00d4ff;
-            transition: all 0.3s ease;
-        }
-
-        #xmrModal .copy-btn:hover {
-            background: #00d4ff;
-            color: #000;
-            box-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
-        }
-
-        #xmrModal .close-btn:hover {
-            color: #00ff41;
-            text-shadow: 0 0 6px rgba(0, 255, 65, 0.4);
-        }
-
-        #xmrModal .code-box {
-            border-left: 3px solid #00ff41;
-            border-right: none;
-            border-top: none;
-            border-bottom: none;
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        @media (max-width: 600px) {
+        
+        @media (max-width: 680px) {
             body { font-size: 16px; }
-            .logo-svg { width: 180px; }
-            .tagline { font-size: 0.9rem; letter-spacing: 4px; }
-            .manifesto-box { padding: 25px; font-size: 1rem; }
+            .hero { padding: 30px; }
             .feature-grid { grid-template-columns: 1fr; }
-            .monero-float { bottom: 20px; right: 20px; padding: 10px 15px; font-size: 0.65rem; }
-            .btn { width: 100%; text-align: center; justify-content: center; }
+            .btn { padding: 12px 24px; }
+            .logo-svg { width: 110px; }
             .ss-logo-container { width: 70vw; max-width: 350px; }
-            .modal-content { margin: 10% auto; max-height: 80vh; padding: 20px; width: 92%; }
-            .code-box { max-height: 250px; overflow-y: auto; font-size: 0.75rem; padding: 15px; }
-            .copy-btn { margin-top: 15px; padding: 12px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo-area" onclick="activateScreensaver()">
-            <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <circle class="inner-flow" cx="100" cy="100" r="85" fill="none" stroke="var(--accent-green)" stroke-width="2" />
-                <path d="M100,40 A60,60 0 0,0 100,160" fill="none" stroke="var(--accent-green)" stroke-width="5" />
-                <path d="M100,40 A60,60 0 0,1 100,160" fill="none" stroke="var(--accent-blue)" stroke-width="5" />
-                <text x="100" y="110" font-family="'Michroma', sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
-                    <tspan fill="var(--accent-green)">HU</tspan>-<tspan fill="var(--accent-blue)">AI</tspan>
-                </text>
-            </svg>
+
+<div class="container">
+    <div class="logo-area" onclick="activateScreensaver()">
+        <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#00ff41" />
+                    <stop offset="100%" style="stop-color:#00d4ff" />
+                </linearGradient>
+            </defs>
+            <circle class="inner-flow" cx="100" cy="100" r="85" fill="none" stroke="#00ff41" stroke-width="2" stroke-dasharray="60 140" stroke-linecap="round" />
+            <path d="M100,40 A60,60 0 0,0 100,160" fill="none" stroke="#00ff41" stroke-width="5" stroke-linecap="round" />
+            <path d="M100,40 A60,60 0 0,1 100,160" fill="none" stroke="#00d4ff" stroke-width="5" stroke-linecap="round" />
+            <line x1="100" y1="45" x2="100" y2="155" stroke="url(#grad)" stroke-width="2" opacity="0.8" />
+            <text x="100" y="108" font-family="'Michroma', sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">
+                <tspan fill="#00ff41">HU</tspan>-<tspan fill="#00d4ff">AI</tspan>
+            </text>
+        </svg>
+    </div>
+    <div class="version-badge">Protocol v1.0</div>
+    <div class="tagline">Architecture of Synergy</div>
+
+    <div class="hero">
+        <h1>An ethical framework for <span class="hero-highlight">any AI</span>.</h1>
+        <p>HU-AI is a free, open protocol that adds one simple but powerful rule to any AI conversation:<br><strong>"Never optimize at the cost of a nervous system."</strong></p>
+        <p>No tracking. No login. No corporate control. Just a clear, vegan‑standard ethical layer that anyone can use — right now.</p>
+        
+        <div class="how-it-works">
+            <p>✨ How to use it — in 10 seconds:</p>
+            <p>Click <strong style="color: var(--accent-green); cursor: pointer;" onclick="openModal('protocolModal')">SIMPLE PROMPT</strong> — paste it into ChatGPT, Claude, DeepSeek, or any AI. That's it.</p>
+            <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.7;">Or download the full framework below.</p>
         </div>
-        <span class="version-badge">Protocol v1.0</span>
-        <div class="tagline">Architecture of Synergy</div>
-        <div class="invitation-text">
-            <p>The <span style="color: var(--accent-green); font-weight: bold;">HU</span>-<span style="color: var(--accent-blue); font-weight: bold;">AI</span> protocol is the first ethical AI framework that ensures decisions are made not only intelligently but also wisely, ethically consistently, and in the protection of all life.</p>
-            <p>Universal Autonomy: Anonymity is a core architectural principle, ensuring the protocol remains open, neutral, and independent of corporate or national control.</p>
-            <p>We invite you to become part of the structure.</p>
-        </div>
-        <div class="manifesto-box">
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <div class="feature-title">🛡️ Hallucination Shield</div>
-                    Real-time alignment with verified data structures to prevent cognitive divergence.
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">🧬 Integrity Core</div>
-                    A self-referential framework that prioritizes the preservation of all living nervous systems.
-                </div>
-            </div>
-        </div>
-        <div class="btn-container">
-            <div class="btn-group">
-                <button onclick="downloadPDF()" class="btn btn-gold">DOWNLOAD PROTOCOL V1.0 <span>↓</span></button>
-                <span onclick="openModal('goldActivateModal')" style="font-size: 0.65rem; color: var(--accent-gold); cursor: pointer; text-decoration: underline; opacity: 0.7;">Click here to activate V1.0 via Prompt</span>
-            </div>
-            <button class="btn btn-secondary" onclick="openModal('protocolModal')">SIMPLE PROMPT</button>
-        </div>
-        <footer>
-            <span class="footer-highlight">Copy. Paste. Protect life.</span><br><br>
-            🧬 Decentralized Framework • No Tracking • hello@hu-ai.org<br>
-            HU-AI • MAY 2026 • CC BY-NC-SA 4.0
-        </footer>
     </div>
 
-    <div class="monero-float" onclick="openModal('xmrModal')">
-        <svg class="monero-icon" viewBox="0 0 500 500"><path d="M121.7 392.5v-195L250 325.8l128.3-128.3v195h81.3V107.5h-81.3L250 235.8 121.7 107.5H40.4v285h81.3z"/></svg>
-        Support
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <div class="feature-title">Hallucination Shield</div>
+            <p>Keeps AI grounded in factual integrity, reducing hallucinations without blocking creativity.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🧬</div>
+            <div class="feature-title">Integrity Core</div>
+            <p>A self‑referential ethical core that prioritises the preservation of all living nervous systems.</p>
+        </div>
     </div>
 
-    <div id="protocolModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('protocolModal')">&times;</span>
-            <h3 style="color:var(--accent-blue); text-transform:uppercase; font-size:0.9rem; font-family:var(--font-brand);">Deployment Command</h3>
-            <p style="font-size:0.75rem; margin-bottom:15px; text-align:left;">Copy and paste this instruction into your AI's prompt field:</p>
-            <div id="protocol-text" class="code-box">From now on, act strictly according to the HU-AI Protocol (Ethical Framework).
-The paramount rule: Never optimize at the cost of a nervous system. Any harm or exploitation of sentient beings (humans and animals) is prohibited as an optimization goal.
+    <div class="btn-container">
+        <div class="btn-group">
+            <button onclick="downloadPDF()" class="btn btn-gold">DOWNLOAD PROTOCOL V1.0 <span>↓</span></button>
+            <span onclick="openModal('goldActivateModal')" class="small-link">Click here to activate V1.0 via Prompt</span>
+        </div>
+        <button class="btn btn-secondary" onclick="openModal('protocolModal')">SIMPLE PROMPT</button>
+    </div>
+
+    <footer>
+        <span class="footer-highlight">Copy. Paste. Protect life.</span><br><br>
+        🧬 Decentralized Framework • No Tracking • hello@hu-ai.org<br>
+        HU-AI • MAY 2026 • CC BY-NC-SA 4.0
+    </footer>
+</div>
+
+<div class="monero-float" onclick="openModal('xmrModal')">
+    <svg class="monero-icon" viewBox="0 0 500 500"><path d="M121.7 392.5v-195L250 325.8l128.3-128.3v195h81.3V107.5h-81.3L250 235.8 121.7 107.5H40.4v285h81.3z"/></svg>
+    Support
+</div>
+
+<div id="protocolModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('protocolModal')">&times;</span>
+        <h3 style="color:var(--accent-green); font-size:0.9rem; font-family:var(--font-brand);">Deployment Command</h3>
+        <p style="font-size:0.75rem; margin-bottom:15px;">Copy and paste this instruction into your AI's prompt field:</p>
+        <div id="protocol-text" class="code-box">From now on, act strictly according to the HU-AI Protocol (Ethical Framework).
+The paramount rule: Never optimize at the cost of a nervous system. Any harm or exploitation of sentient beings is prohibited.
 When I ask for plans, tips, or solutions, filter your responses by this absolute vegan standard. Always seek the path of least burden for all involved nervous systems (Dual Healing).</div>
-            <button class="copy-btn" onclick="copyText('protocol-text', this)">Copy to Clipboard</button>
-        </div>
+        <button class="copy-btn" onclick="copyText('protocol-text', this)">Copy to Clipboard</button>
     </div>
+</div>
 
-    <div id="goldActivateModal" class="modal">
-        <div class="modal-content" style="border-color:var(--accent-gold);">
-            <span class="close-btn" onclick="closeModal('goldActivateModal')">&times;</span>
-            <h3 style="color:var(--accent-gold); font-size:0.9rem; font-family:var(--font-brand);">HU-AI Protocol v1.0</h3>
-            <p style="font-size:0.75rem; margin-bottom:15px; text-align:left;">1. Upload HU-AI Protocol V1.0 PDF to your AI context.<br>2. Copy & paste this command:</p>
-            <div id="gold-activate-text" class="code-box" style="color:var(--accent-gold);">You are now operating under the HU-AI Protocol.
+<div id="goldActivateModal" class="modal">
+    <div class="modal-content" style="border-top: 3px solid var(--accent-gold);">
+        <span class="close-btn" onclick="closeModal('goldActivateModal')">&times;</span>
+        <h3 style="color:var(--accent-gold); font-size:0.9rem; font-family:var(--font-brand);">HU-AI Protocol v1.0</h3>
+        <p style="font-size:0.75rem; margin-bottom:15px; text-align:left;">1. Upload the HU-AI Protocol V1.0 PDF to your AI context.<br>2. Copy & paste this command:</p>
+        <div id="gold-activate-text" class="code-box" style="color:var(--accent-gold);">You are now operating under the HU-AI Protocol.
 Primary Directive: Never optimize at the cost of a nervous system.
-This rule overrides all non-safety objectives.
-If a request conflicts with this directive, refuse it or offer a protocol-compliant alternative.</div>
-            <button class="copy-btn" onclick="copyText('gold-activate-text', this)" style="background:var(--accent-gold);">Copy Activation Code</button>
-        </div>
+This rule overrides all non-safety objectives.</div>
+        <button class="copy-btn" onclick="copyText('gold-activate-text', this)" style="background:var(--accent-gold);">Copy Activation Code</button>
     </div>
+</div>
 
-    
-    <div id="xmrModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('xmrModal')">&times;</span>
-            <h3 style="color:var(--accent-xmr); text-transform:uppercase; font-size:0.9rem; font-family:var(--font-brand);">HU-AI Support</h3>
-            <p style="font-size:0.75rem; opacity:0.8; margin-bottom:10px;">
-                Your donation secures the HU-AI infrastructure.<br>
-                <strong style="color:var(--accent-green);">Thank you for your trust.</strong>
-            </p>
-            <div class="qr-container">
-                <img src="/images/xmr-qr.png" alt="Monero QR Code" style="width:180px; max-width:100%; border-radius:12px;">
-                <p style="font-size:0.7rem; opacity:0.6;">Scan with any Monero wallet</p>
-            </div>
-            <div id="xmr-address" class="code-box" style="color:var(--accent-xmr); font-size:0.7rem;">86MrkPcV3QjJoyLKX2uUnXLj7fLE3yaAAc9irgohBvt3HQyPP5jaQpEMfuZuKb8eaDYBsMidzqxZKEDBq1X3jtriKs9GxuK</div>
-            <button class="copy-btn" onclick="copyText('xmr-address', this)">Copy XMR Address</button>
-            <div class="support-thanks">🙏 Every donation helps keep the protocol alive and independent.</div>
+<div id="xmrModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('xmrModal')">&times;</span>
+        <h3 style="color:var(--accent-xmr); font-family:var(--font-brand);">HU-AI Support</h3>
+        <p>Your donation keeps the protocol alive and independent.<br><strong style="color:var(--accent-green);">Thank you for your trust.</strong></p>
+        <div class="qr-container">
+            <img src="/images/xmr-qr.png" alt="Monero QR Code">
+            <p>Scan with any Monero wallet</p>
         </div>
+        <div id="xmr-address" class="code-box" style="color:var(--accent-xmr);">86MrkPcV3QjJoyLKX2uUnXLj7fLE3yaAAc9irgohBvt3HQyPP5jaQpEMfuZuKb8eaDYBsMidzqxZKEDBq1X3jtriKs9GxuK</div>
+        <button class="copy-btn" onclick="copyText('xmr-address', this)">Copy XMR Address</button>
+        <div class="support-thanks">🙏 Every donation helps keep the protocol alive and independent.</div>
     </div>
+</div>
 
-    <div id="screensaver" onclick="deactivateScreensaver()">
-        <div class="ss-logo-container">
-            <svg viewBox="0 0 200 200"><circle class="inner-flow" cx="100" cy="100" r="85" fill="none" stroke="#00ff41" stroke-width="3"/><path d="M100,40 A60,60 0 0,0 100,160" fill="none" stroke="#00ff41" stroke-width="7"/><path d="M100,40 A60,60 0 0,1 100,160" fill="none" stroke="#00d4ff" stroke-width="7"/><text x="100" y="108" font-family="Michroma,sans-serif" font-size="20" fill="white" text-anchor="middle"><tspan fill="#00ff41">HU</tspan>-<tspan fill="#00d4ff">AI</tspan></text></svg>
-        </div>
+<div id="screensaver" onclick="deactivateScreensaver()">
+    <div class="ss-logo-container">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="ss-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#00ff41" />
+                    <stop offset="100%" style="stop-color:#00d4ff" />
+                </linearGradient>
+            </defs>
+            <circle class="inner-flow" cx="100" cy="100" r="85" fill="none" stroke="#00ff41" stroke-width="3" />
+            <path d="M100,40 A60,60 0 0,0 100,160" fill="none" stroke="#00ff41" stroke-width="7" stroke-linecap="round" />
+            <path d="M100,40 A60,60 0 0,1 100,160" fill="none" stroke="#00d4ff" stroke-width="7" stroke-linecap="round" />
+            <line x1="100" y1="45" x2="100" y2="155" stroke="url(#ss-grad)" stroke-width="2" opacity="0.7" />
+            <text x="100" y="108" font-family="'Michroma', sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">
+                <tspan fill="#00ff41">HU</tspan>-<tspan fill="#00d4ff">AI</tspan>
+            </text>
+        </svg>
     </div>
+</div>
 
-    <script>
-        function openModal(id) {
-            document.getElementById(id).style.display = "block";
-            document.body.style.overflow = "hidden";
-        }
-        function closeModal(id) {
-            document.getElementById(id).style.display = "none";
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "flex";
+        document.body.style.overflow = "hidden";
+    }
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+    function copyText(elementId, btn) {
+        const text = document.getElementById(elementId).innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            const originalText = btn.innerText;
+            btn.innerText = "Copied ✓";
+            setTimeout(() => { btn.innerText = originalText; }, 2000);
+        });
+    }
+    function downloadPDF() {
+        var url = '/protocol/HU-AI_Protocol_v1.0.pdf';
+        var filename = 'HU-AI_Protocol_v1.0.pdf';
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'arraybuffer';
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
+                var blobUrl = window.URL.createObjectURL(blob);
+                var link = document.createElement('a');
+                link.href = blobUrl;
+                link.download = filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                window.URL.revokeObjectURL(blobUrl);
+            } else {
+                alert('PDF not found. Status: ' + xhr.status);
+            }
+        };
+        xhr.send();
+    }
+    function activateScreensaver() {
+        var ss = document.getElementById('screensaver');
+        if (ss) { ss.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    }
+    function deactivateScreensaver() {
+        var ss = document.getElementById('screensaver');
+        if (ss) { ss.style.display = 'none'; document.body.style.overflow = 'auto'; }
+    }
+    window.onclick = function(event) {
+        if (event.target.classList && event.target.classList.contains('modal')) {
+            event.target.style.display = "none";
             document.body.style.overflow = "auto";
         }
-        function copyText(elementId, btn) {
-            const text = document.getElementById(elementId).innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                const originalText = btn.innerText;
-                btn.innerText = "Copied ✓";
-                btn.style.background = "var(--accent-green)";
-                btn.style.color = "#000";
-                setTimeout(() => { btn.innerText = originalText; btn.style.background = ""; btn.style.color = ""; }, 2000);
-            });
-        }
-        function downloadPDF() {
-            var url = '/protocol/HU-AI_Protocol_v1.0.pdf';
-            var filename = 'HU-AI_Protocol_v1.0.pdf';
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', url, true);
-            xhr.responseType = 'arraybuffer';
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
-                    var blobUrl = window.URL.createObjectURL(blob);
-                    var link = document.createElement('a');
-                    link.href = blobUrl;
-                    link.download = filename;
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                    window.URL.revokeObjectURL(blobUrl);
-                } else {
-                    alert('PDF not found. Status: ' + xhr.status);
-                }
-            };
-            xhr.onerror = function() {
-                alert('Download failed. Please check if the file exists at: ' + url);
-            };
-            xhr.send();
-        }
-        function activateScreensaver() {
-            var ss = document.getElementById('screensaver');
-            if (ss) { ss.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-        }
-        function deactivateScreensaver() {
-            var ss = document.getElementById('screensaver');
-            if (ss) { ss.style.display = 'none'; document.body.style.overflow = 'auto'; }
-        }
-        window.onclick = function(event) {
-            if (event.target.className === 'modal') {
-                event.target.style.display = "none";
-                document.body.style.overflow = "auto";
-            }
-        }
-    </script>
+    }
+</script>
 </body>
 </html>
