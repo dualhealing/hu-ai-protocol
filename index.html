@@ -641,6 +641,9 @@ This rule overrides all non-safety objectives.</div>
                 alert('PDF not found. Status: ' + xhr.status);
             }
         };
+        xhr.onerror = function() {
+            alert('Download failed. Please check if the file exists at: ' + url);
+        };
         xhr.send();
     }
     function activateScreensaver() {
