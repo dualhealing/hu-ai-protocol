@@ -232,7 +232,7 @@
         
         .btn {
             cursor: pointer;
-            padding: 14px 32px;
+            padding: 0 32px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -243,11 +243,11 @@
             font-family: var(--font-main);
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
             text-decoration: none;
-        }
-        .btn-secondary {
-             min-width: 280px;
+            height: 48px;
+            line-height: 1;
         }
         
         .btn-gold {
@@ -263,9 +263,10 @@
         }
         
         .btn-secondary {
-            background: transparent;
             border: 1px solid var(--border-light);
             color: var(--text-color);
+            background: transparent;
+            min-width: 280px;
         }
         
         .btn-secondary:hover {
@@ -462,12 +463,15 @@
             body { font-size: 16px; }
             .hero { padding: 30px; }
             .feature-grid { grid-template-columns: 1fr; }
-            .btn { padding: 12px 24px; }
+            .btn { padding: 0 24px; height: 44px; }
             .logo-svg { width: 110px; }
             .ss-logo-container { width: 70vw; max-width: 350px; }
             .modal-content {
                 padding: 20px;
                 margin: 10px auto;
+            }
+            .btn-secondary {
+                min-width: auto;
             }
         }
     </style>
@@ -497,7 +501,7 @@
 
     <div class="hero">
         <h1>An ethical framework for <span class="hero-highlight">any AI</span>.</h1>
-    <p><span translate="no"><span style="color: #00ff41; font-weight: bold;">HU</span>-<span style="color: #00d4ff; font-weight: bold;">AI</span> </span>is a free, open protocol that adds one simple but powerful rule to any AI conversation:<br><strong translate="no">Never optimize at the cost of a nervous system.</strong></p>
+        <p><span translate="no"><span style="color: #00ff41; font-weight: bold;">HU</span>-<span style="color: #00d4ff; font-weight: bold;">AI</span> </span>is a free, open protocol that adds one simple but powerful rule to any AI conversation:<br><strong translate="no">Never optimize at the cost of a nervous system.</strong></p>
         <p>No tracking. No login. No corporate control. Just a clear ethical layer that anyone can use — right now.</p>
         
         <div class="how-it-works">
@@ -520,13 +524,13 @@
         </div>
     </div>
 
-   <div class="btn-container">
-    <div class="btn-group">
-        <button onclick="downloadPDF()" class="btn btn-gold">DOWNLOAD <span translate="no"><span style="color: #00ff41; font-weight: bold;">HU</span>-<span style="color: #00d4ff; font-weight: bold;">AI</span></span> PROTOCOL V1.0 <span>↓</span></button>
-        <span onclick="openModal('goldActivateModal')" class="small-link">Click here to activate V1.0 via Prompt</span>
+    <div class="btn-container">
+        <div class="btn-group">
+            <button onclick="downloadPDF()" class="btn btn-gold">DOWNLOAD <span translate="no"><span style="color: #00ff41; font-weight: bold;">HU</span>-<span style="color: #00d4ff; font-weight: bold;">AI</span></span> PROTOCOL V1.0 <span>↓</span></button>
+            <span onclick="openModal('goldActivateModal')" class="small-link">Click here to activate V1.0 via Prompt</span>
+        </div>
+        <button class="btn btn-secondary" onclick="openModal('protocolModal')">SIMPLE PROMPT</button>
     </div>
-    <button class="btn btn-secondary" onclick="openModal('protocolModal')">SIMPLE PROMPT</button>
-</div>
 
     <footer>
         <span class="footer-highlight">Copy. Paste. Protect life.</span><br><br>
