@@ -675,32 +675,15 @@ This rule overrides all non-safety objectives.</div>
             setTimeout(() => { btn.innerText = originalText; }, 2000);
         });
     }
-    function downloadPDF() {
-        var url = '/protocol/HU-AI_Protocol_v1.0.pdf';
-        var filename = 'HU-AI_Protocol_v1.0.pdf';
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', url, true);
-        xhr.responseType = 'arraybuffer';
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
-                var blobUrl = window.URL.createObjectURL(blob);
-                var link = document.createElement('a');
-                link.href = blobUrl;
-                link.download = filename;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                window.URL.revokeObjectURL(blobUrl);
-            } else {
-                alert('PDF not found. Status: ' + xhr.status);
-            }
-        };
-        xhr.onerror = function() {
-            alert('Download failed. Please check if the file exists at: ' + url);
-        };
-        xhr.send();
-    }
+ function downloadPDF() {
+    var filename = 'Whitepaper_HU-AI_Protocol_v1.0.pdf';
+    var link = document.createElement('a');
+    link.href = '/protocol/' + filename;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
     function activateScreensaver() {
         var ss = document.getElementById('screensaver');
         if (ss) { ss.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
