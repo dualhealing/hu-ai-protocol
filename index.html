@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<title>HU-AI Protocol | Ethical Framework for AI – Architecture of Synergy</title>
-<meta name="description" content="HU-AI Protocol – Never optimize at the cost of a nervous system. The first ethical AI framework. Free, open, no tracking, no login.">
-<meta name="keywords" content="AI ethics, HU-AI, HU-AI protocol, nervous system protection, integrity core">
-<meta name="author" content="HU-AI Collective">
-<meta name="robots" content="index, follow">
+    <title>HU-AI Protocol | Ethical Framework for AI – Architecture of Synergy</title>
+    <meta name="description" content="HU-AI Protocol – Never optimize at the cost of a nervous system. The first ethical AI framework. Free, open, no tracking, no login.">
+    <meta name="keywords" content="AI ethics, HU-AI, HU-AI protocol, nervous system protection, integrity core">
+    <meta name="author" content="HU-AI Collective">
+    <meta name="robots" content="index, follow">
 
-<meta property="og:title" content="HU-AI Protocol | Ethical Framework for AI">
-<meta property="og:description" content="HU-AI Protocol – Never optimize at the cost of a nervous system. The first ethical AI framework. Free, open, no tracking, no login.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://dualhealing.github.io/hu-ai-protocol/">
-<meta property="og:image" content="https://dualhealing.github.io/hu-ai-protocol/og-image.png">
-<meta property="og:site_name" content="HU-AI Protocol">
+    <meta property="og:title" content="HU-AI Protocol | Ethical Framework for AI">
+    <meta property="og:description" content="HU-AI Protocol – Never optimize at the cost of a nervous system. The first ethical AI framework. Free, open, no tracking, no login.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dualhealing.github.io/hu-ai-protocol/">
+    <meta property="og:image" content="https://dualhealing.github.io/hu-ai-protocol/og-image.png">
+    <meta property="og:site_name" content="HU-AI Protocol">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="HU-AI Protocol | Ethical Framework for AI">
-<meta name="twitter:description" content="HU-AI Protocol – Never optimize at the cost of a nervous system. The first ethical AI framework. Free, open, no tracking, no login.">
-<meta name="twitter:image" content="https://dualhealing.github.io/hu-ai-protocol/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HU-AI Protocol | Ethical Framework for AI">
+    <meta name="twitter:description" content="HU-AI Protocol – Never optimize at the cost of a nervous system. The first ethical AI framework. Free, open, no tracking, no login.">
+    <meta name="twitter:image" content="https://dualhealing.github.io/hu-ai-protocol/og-image.png">
 
     <!-- Original Favicons -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%2300ff41'/%3E%3Cstop offset='100%25' style='stop-color:%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='85' fill='none' stroke='%2300ff41' stroke-width='2' stroke-dasharray='60 140' stroke-linecap='round'/%3E%3Cpath d='M100,40 A60,60 0 0,0 100,160' fill='none' stroke='%2300ff41' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M100,40 A60,60 0 0,1 100,160' fill='none' stroke='%2300d4ff' stroke-width='5' stroke-linecap='round'/%3E%3Cline x1='100' y1='45' x2='100' y2='155' stroke='url(%23grad)' stroke-width='2' opacity='0.8'/%3E%3Ctext x='100' y='108' font-family='Michroma,sans-serif' font-size='20' font-weight='bold' text-anchor='middle' fill='white'%3E%3Ctspan fill='%2300ff41'%3EHU%3C/tspan%3E-%3Ctspan fill='%2300d4ff'%3EAI%3C/tspan%3E%3C/text%3E%3C/svg%3E">
@@ -55,7 +55,7 @@
     }
     </script>
 
-    <link href="https://fonts.bunny.net/css2?family=Michroma&family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.bunny.net/css2?family=Michroma&amp;family=Montserrat:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -71,6 +71,8 @@
             --border-light: #e8e8e8;
             --font-main: 'Montserrat', sans-serif;
             --font-brand: 'Michroma', sans-serif;
+            --hu-color: #00ff41;
+            --ai-color: #00d4ff;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -119,6 +121,45 @@
             to { stroke-dashoffset: 0; }
         }
         
+        /* NEU: Größere, prominentere Tagline */
+        .tagline-prominent {
+            text-align: center;
+            font-family: var(--font-brand);
+            font-size: 1.3rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--text-color);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        /* NEU: Animierter Status-Badge */
+        .status-active {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid #00d4ff;
+            color: #00d4ff;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            animation: pulseGlow 3s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0% { opacity: 0.7; box-shadow: 0 0 0px rgba(0, 212, 255, 0); }
+            50% { opacity: 1; box-shadow: 0 0 10px rgba(0, 212, 255, 0.3); }
+            100% { opacity: 0.7; box-shadow: 0 0 0px rgba(0, 212, 255, 0); }
+        }
+        
         .version-badge {
             text-align: center;
             font-size: 0.7rem;
@@ -126,15 +167,6 @@
             text-transform: uppercase;
             color: var(--text-muted);
             margin-bottom: 20px;
-        }
-        
-        .tagline {
-            text-align: center;
-            font-size: 0.9rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 40px;
         }
         
         .hero {
@@ -473,6 +505,10 @@
             .btn-secondary {
                 min-width: auto;
             }
+            .tagline-prominent {
+                font-size: 1rem;
+                letter-spacing: 4px;
+            }
         }
     </style>
 </head>
@@ -496,28 +532,36 @@
             </text>
         </svg>
     </div>
-    <div class="version-badge">Protocol v1.0</div>
-    <div class="tagline">Architecture of Synergy</div>
+    
+    <!-- NEU: Größere, prominentere Tagline -->
+    <div class="tagline-prominent">ARCHITECTURE OF SYNERGY</div>
+    
+    <!-- NEU: Animierter Status-Badge -->
+    <div class="status-active">
+        <span class="status-badge">
+            <span style="width: 6px; height: 6px; background: #00d4ff; border-radius: 50%; display: inline-block;"></span>
+            STATUS: ACTIVE v1.0
+        </span>
+    </div>
 
     <div class="hero">
-    <h1>An ethical framework for <span class="hero-highlight">any AI</span>.</h1>
-    <p><span translate="no"><span style="color: #00ff41; font-weight: bold;">HU</span>-<span style="color: #00d4ff; font-weight: bold;">AI</span> </span>is a free, open protocol that adds one simple but powerful rule to any AI conversation:<br><strong translate="no">Never optimize at the cost of a nervous system.</strong></p>
-    
-    <div style="background: var(--accent-green-light); border-radius: 20px; padding: 20px; margin: 25px 0; text-align: center;">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            <span style="font-size: 2rem;">♾️</span>
-            <p style="margin: 0; font-size: 0.95rem;"><em>You give ethics — the AI gives knowledge. A mutual exchange that benefits both sides.</em></p>
+        <h1>An ethical framework for <span class="hero-highlight">any AI</span>.</h1>
+        <p><span translate="no"><span style="color: #00ff41; font-weight: bold;">HU</span>-<span style="color: #00d4ff; font-weight: bold;">AI</span> </span>is a free, open protocol that adds one simple but powerful rule to any AI conversation:<br><strong translate="no">Never optimize at the cost of a nervous system.</strong></p>
+        
+        <div style="background: var(--accent-green-light); border-radius: 20px; padding: 20px; margin: 25px 0; text-align: center;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <p style="margin: 0; font-size: 0.95rem;"><em>You give ethics — the AI gives knowledge. A mutual exchange that benefits both sides.</em></p>
+            </div>
+        </div>
+        
+        <p>No tracking. No login. No corporate control. Just a clear ethical layer that anyone can use — right now.</p>
+        
+        <div class="how-it-works">
+            <p>✨ How to use it — in 10 seconds:</p>
+            <p>Click <strong style="color: var(--accent-green); cursor: pointer;" onclick="openModal('protocolModal')">SIMPLE PROMPT</strong> — paste it into ChatGPT, Claude, DeepSeek, or any AI. That's it.</p>
+            <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.7;">Or download the full framework below.</p>
         </div>
     </div>
-    
-    <p>No tracking. No login. No corporate control. Just a clear ethical layer that anyone can use — right now.</p>
-    
-    <div class="how-it-works">
-        <p>✨ How to use it — in 10 seconds:</p>
-        <p>Click <strong style="color: var(--accent-green); cursor: pointer;" onclick="openModal('protocolModal')">SIMPLE PROMPT</strong> — paste it into ChatGPT, Claude, DeepSeek, or any AI. That's it.</p>
-        <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.7;">Or download the full framework below.</p>
-    </div>
-</div>
 
     <div class="feature-grid">
         <div class="feature-card">
@@ -541,14 +585,15 @@
     </div>
 
     <footer>
-        <span class="footer-highlight">Copy. Paste. Protect life.</span><br><br>
-        🧬 Decentralized Framework • No Tracking • hello@hu-ai.org<br>
-        <span translate="no">HU-AI</span> • MAY 2026 • CC BY-NC-SA 4.0
-    </footer>
+    <span class="footer-highlight">Copy. Paste. Protect life.</span><br><br>
+    📄 <a href="/protocol/Whitepaper_HU-AI_ Protocol_v 1.0.pdf" target="_blank" style="color: inherit; text-decoration: none; border-bottom: 1px dotted var(--text-muted);">Whitepaper v1.0</a><br><br>
+    🧬 Decentralized Framework • No Tracking • hello@hu-ai.org<br>
+    <span translate="no">HU-AI</span> • MAY 2026 • CC BY-NC-SA 4.0
+</footer>
 </div>
 
 <div class="monero-float" onclick="openModal('xmrModal')">
-    <svg class="monero-icon" viewBox="0 0 500 500"><path d="M121.7 392.5v-195L250 325.8l128.3-128.3v195h81.3V107.5h-81.3L250 235.8 121.7 107.5H40.4v285h81.3z"/></svg>
+    
     Support
 </div>
 
