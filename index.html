@@ -675,15 +675,15 @@ This rule overrides all non-safety objectives.</div>
             setTimeout(() => { btn.innerText = originalText; }, 2000);
         });
     }
- function downloadPDF() {
-    var filename = 'Whitepaper_HU-AI_Protocol_v1.0.pdf';
+    function downloadPDF() {
+    var filename = 'HU-AI_Protocol_v1.0.pdf';
     var link = document.createElement('a');
     link.href = '/protocol/' + filename;
     link.download = filename;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-}
+    }
     function activateScreensaver() {
         var ss = document.getElementById('screensaver');
         if (ss) { ss.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
