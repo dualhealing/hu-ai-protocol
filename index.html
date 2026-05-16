@@ -696,14 +696,25 @@ This rule overrides all non-safety objectives.</div>
         });
     }
     function downloadPDF() {
-    var filename = 'HU-AI_Protocol_v1.0.pdf';
-    var link = document.createElement('a');
-    link.href = '/protocol/' + filename;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    }
+    var pdfPath = 'protocol/Whitepaper_HU-AI_Protocol_v1.0.pdf';
+    
+    fetch(pdfPath)
+        .then(response => response.blob())
+        .then(blob => {
+            const blobUrl = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = 'HU-AI_Protocol_v1.0.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(blobUrl);
+        })
+        .catch(error => {
+            // Fallback: Im neuen Tab öffnen
+            window.open(pdfPath, '_blank');
+        });
+}
     function activateScreensaver() {
         var ss = document.getElementById('screensaver');
         if (ss) { ss.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
