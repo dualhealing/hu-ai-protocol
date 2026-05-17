@@ -707,7 +707,27 @@ This rule overrides all non-safety objectives.</div>
         });
     }
    
-    
+    function downloadProtocol() {
+        fetch('protocol/HU-AI_Protocol_v1.0.pdf')
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.blob();
+            })
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'HU-AI_Protocol_v1.0.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            })
+            .catch(() => {
+                alert('Download failed. Please try again.');
+            });
+    }
+
     function activateScreensaver() {
         var ss = document.getElementById('screensaver');
         if (ss) { ss.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
