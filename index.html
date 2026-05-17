@@ -558,12 +558,23 @@
     <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.7;">
         <span style="display: inline-block; width: 8px; height: 8px; background-color: #ffffff; border-radius: 50%; margin-right: 6px; box-shadow: 0 0 0 1px var(--accent-green);"></span>
         The Simple Prompt is for AI chat. 
-        <a href="protocol/HU-AI_Protocol_v1.0.zip" 
-           download="HU-AI_Protocol_v1.0.zip"
-           style="color: var(--accent-green);">
-            Download <span translate="no"><span style="color: #00ff41;">HU</span>-<span style="color: #00d4ff;">AI</span></span> Protocol v1.0
+        <a href="protocol/HU-AI_Protocol_v1.0.pdf" style="color: var(--accent-green);">
+            Download <span translate="no"><span style="color: #00ff41;">HU</span>-<span style="color: #00d4ff;">AI</span></span> Protocol V1.0
         </a>
     </p>
+</div>
+    </div>
+
+  <div class="feature-grid">
+    <div class="feature-card">
+        <div class="feature-icon">🔄</div>
+        <div class="feature-title">Dual Healing</div>
+        <p>Every response must benefit both the user AND the affected ecosystem.</p>
+    </div>
+    <div class="feature-card">
+    <div class="feature-icon">🧭</div>
+    <div class="feature-title">Dissonance Management</div>
+    <p>Conflicts between efficiency and integrity are identified, documented, and corrected.</p>
 </div>
 </div>
 
@@ -571,12 +582,12 @@
      <div class="btn-container">
     <div class="btn-group">
     
-        <a href="protocol/HU-AI_Protocol_v1.0.zip" 
-   download="HU-AI_Protocol_v1.0.zip"
-   class="btn btn-gold" 
-   style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-    DOWNLOAD <span translate="no"><span style="color: #00ff41; font-weight: bold;">HU</span>-<span style="color: #00d4ff; font-weight: bold;">AI</span></span> PROTOCOL v1.0 <span>↓</span>
-</a>
+        <a href="protocol/HU-AI_Protocol_v1.0.pdf" 
+           download="HU-AI_Protocol_v1.0.pdf"
+           class="btn btn-gold" 
+           style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+            DOWNLOAD <span translate="no"><span style="color: #00ff41; font-weight: bold;">HU</span>-<span style="color: #00d4ff; font-weight: bold;">AI</span></span> PROTOCOL V1.0 <span>↓</span>
+        </a>
         <span onclick="openModal('goldActivateModal')" class="small-link">Click here to activate V1.0 via Prompt</span>
        
     </div>
@@ -707,27 +718,7 @@ This rule overrides all non-safety objectives.</div>
         });
     }
    
-    function downloadProtocol() {
-        fetch('protocol/HU-AI_Protocol_v1.0.pdf')
-            .then(response => {
-                if (!response.ok) throw new Error('Network response was not ok');
-                return response.blob();
-            })
-            .then(blob => {
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'HU-AI_Protocol_v1.0.pdf';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                window.URL.revokeObjectURL(url);
-            })
-            .catch(() => {
-                alert('Download failed. Please try again.');
-            });
-    }
-
+    
     function activateScreensaver() {
         var ss = document.getElementById('screensaver');
         if (ss) { ss.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
