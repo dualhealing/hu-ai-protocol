@@ -1,5 +1,5 @@
 # HU-AI Protocol Core Security Directory
-# Adhering to HU-AI Protocol v1.2 - Global Standard
+# Adhering to HU-AI Protocol v1.0 - Global Standard
 
 User-agent: *
 Allow: /
