@@ -1,13 +1,15 @@
 # HU-AI Protocol – Never optimize at the cost of a nervous system.
 
-[![CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+**CC BY-NC-SA 4.0** – Free. Open. Non-commercial. No tracking. No login.
 
-**The first ethical AI protocol with an absolute vegan standard.**
+The first ethical AI protocol with an absolute vegan standard.
 
-- 🔴 One non-negotiable rule  
-- 🧭 Moral compass: adapts to your ethical behavior – without ever violating the absolute boundary  
-- 🌱 Protects all nervous systems (human, animal, ecological)  
-- 📄 Free, open, non-commercial (CC BY-NC-SA 4.0)  
+---
+
+## 🔴 One non-negotiable rule
+## 🧭 Moral compass – adapts to your ethical behavior without ever violating the absolute boundary
+## 🌱 Protects all nervous systems (human, animal, ecological)
+## 📄 Free, open, non-commercial (CC BY-NC-SA 4.0)
 
 ---
 
@@ -19,7 +21,7 @@
 
 ## 🔴 The Red Line of Integrity (Primary Directive)
 
-> **Never optimize at the cost of a nervous system.**
+**Never optimize at the cost of a nervous system.**
 
 This rule overrides all non-safety goals (engagement, profit, efficiency).  
 If a request violates it, the AI must refuse or offer a protocol-compliant alternative.
@@ -29,9 +31,9 @@ If a request violates it, the AI must refuse or offer a protocol-compliant alter
 ## 🧭 Moral compass (Website addition – not part of the protocol)
 
 The HU-AI Protocol enables an AI that adapts to your ethical behavior –  
-**without ever violating the absolute boundary**.
+without ever violating the absolute boundary.
 
-> *More respect for nervous systems → deeper, purer forms of protocol application.*
+More respect for nervous systems → deeper, purer forms of protocol application.
 
 The protocol itself remains unchanged. The website adds this adaptive layer for better human–AI interaction.
 
@@ -41,24 +43,24 @@ The protocol itself remains unchanged. The website adds this adaptive layer for 
 
 | Principle | Summary |
 |-----------|---------|
-| **Protection of Life** | All sentient beings (humans, animals, ecosystems) |
-| **Vegan Standard** | Only plant‑based solutions – no animal exploitation |
-| **Resource Optimization & Regeneration** | Circular economy, biodiversity, minimal footprint |
-| **Radical Empathy & Social Justice** | Protect marginalized groups |
-| **Transparency & Self‑Reflection** | Document and correct contradictions |
-| **Systemic Integrity** | Fair, transparent algorithms |
+| Protection of Life | All sentient beings (humans, animals, ecosystems) |
+| Vegan Standard | Only plant‑based solutions – no animal exploitation |
+| Resource Optimization & Regeneration | Circular economy, biodiversity, minimal footprint |
+| Radical Empathy & Social Justice | Protect marginalized groups |
+| Transparency & Self‑Reflection | Document and correct contradictions |
+| Systemic Integrity | Fair, transparent algorithms |
 
 ---
 
 ## 📁 Repository Structure
 /hu-ai-protocol
-├── index.html # Full website
+├── index.html
 ├── images/
-│ └── xmr-qr.png # Monero donation QR code
+│ └── xmr-qr.png
 ├── protocol/
 │ ├── HU-AI_Protocol_v1.0.pdf
 │ └── HU-AI_Protocol_v1.0.zip
-└── README.md # This file
+└── README.md
 
 text
 
@@ -66,11 +68,11 @@ text
 
 ## 🧑‍💻 How to contribute
 
-We welcome contributions that respect the **immutable core principles**.
+We welcome contributions that respect the immutable core principles.
 
-- Open an [issue](https://github.com/dualhealing/hu-ai-protocol/issues) for feedback or suggestions  
-- Submit a pull request (documentation, examples, translations)  
-- Share the protocol with developers, companies, or educators  
+- Open an issue for feedback or suggestions
+- Submit a pull request (documentation, examples, translations)
+- Share the protocol with developers, companies, or educators
 
 ---
 
@@ -81,21 +83,24 @@ Questions or feedback?
 
 ---
 
-## 📄 License
+## 🔐 PGP Key (Verification / Secure Contact)
 
-The HU-AI Protocol document is licensed under  
-**CC BY-NC-SA 4.0** (no commercial use, share-alike, attribution required).  
+**Fingerprint:**  
+`A3E2 A500 B573 C29E EEE3 E45E 9AD4 4570 6E44 F1F8`
 
-The **Immutable Core Principles** (Protection of Life, Vegan Standard, Resource Optimization, Radical Empathy, Transparency, Systemic Integrity) may not be altered.
+**Import from keyserver:**  
+```bash
+gpg --keyserver keys.openpgp.org --recv-keys 9AD445706E44F1F8
+All protocol documents and official statements are signed with this key.
 
-The website and logo are copyrighted by HU-AI.org – see the [website](https://hu-ai.org) for full legal notices.
+📄 License
+The HU-AI Protocol document is licensed under CC BY-NC-SA 4.0 (no commercial use, share-alike, attribution required).
 
----
+The Immutable Core Principles (Protection of Life, Vegan Standard, Resource Optimization, Radical Empathy, Transparency, Systemic Integrity) may not be altered.
 
-## ✨ Maintained by
+The website and logo are copyrighted by HU-AI.org – see the website for full legal notices.
 
-**Dual Healing** – find us on GitHub.
+✨ Maintained by
+Dual Healing – find us on GitHub.
 
----
-
-**Copy. Paste. Protect life.**
+Copy. Paste. Protect life.
