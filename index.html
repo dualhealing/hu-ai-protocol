@@ -3,35 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
 <title>HU-AI Protocol | Ethical State Space for any AI</title>
 <meta name="description" content="The HU-AI Protocol defines the ethical state space for any AI – a dynamic, adaptive space for human-AI symbiosis and nervous system integrity. Open, free, no tracking.">
-
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="revisit-after" content="7 days">
 <meta name="page-topic" content="Artificial Intelligence Ethics, Systemic Integrity, Global Synergy">
 <meta name="copyright" content="HU-AI.org - Some Rights Reserved under CC BY-NC-SA 4.0">
 <meta name="audience" content="Global, Developers, Ethicists, Researchers">
-
 <meta name="keywords" content="AI ethics, HU-AI, HU-AI protocol, nervous system protection, ethical state space, integrity core, decentralized AI layer, AI alignment, autonomous safety">
 <meta name="author" content="HU-AI Collective">
-
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="me" href="https://mastodon.social/@hu_ai">
-
 <meta property="og:title" content="HU-AI Protocol | Ethical State Space for any AI">
 <meta property="og:description" content="HU-AI Protocol – The ethical state space for any AI. Never optimize at the cost of a nervous system. Free, open, no login.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hu-ai.org/">
 <meta property="og:image" content="https://hu-ai.org/og-image.png">
 <meta property="og:site_name" content="HU-AI Protocol">
-
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="HU-AI Protocol | Ethical State Space for any AI">
 <meta name="twitter:description" content="HU-AI Protocol – The ethical state space for any AI. Never optimize at the cost of a nervous system. Free, open.">
 <meta name="twitter:image" content="https://hu-ai.org/og-image.png">
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,463 +46,557 @@
   ]
 }
 </script>
-  
-    <link href="https://fonts.bunny.net/css2?family=Michroma&amp;family=Montserrat:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.bunny.net/css2?family=Michroma&amp;family=Montserrat:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet">
+<style>
+    :root {
+        --bg-color: #faf9f6;
+        --surface-color: #ffffff;
+        --text-color: #1a1a1a;
+        --text-muted: #5a5a5a;
+        --accent-green: #00a03e;
+        --accent-green-light: #e6f4ea;
+        --accent-blue: #0077b6;
+        --accent-gold: #c9a03d;
+        --accent-xmr: #f26822;
+        --border-light: #e8e8e8;
+        --font-main: 'Montserrat', sans-serif;
+        --font-brand: 'Michroma', sans-serif;
+        --hu-color: #00ff41;
+        --ai-color: #00d4ff;
+        --col-first-bg: #f7f7f5;
+    }
     
-    <style>
-        :root {
-            --bg-color: #faf9f6;
-            --surface-color: #ffffff;
-            --text-color: #1a1a1a;
-            --text-muted: #5a5a5a;
-            --accent-green: #00a03e;
-            --accent-green-light: #e6f4ea;
-            --accent-blue: #0077b6;
-            --accent-gold: #c9a03d;
-            --accent-xmr: #f26822;
-            --border-light: #e8e8e8;
-            --font-main: 'Montserrat', sans-serif;
-            --font-brand: 'Michroma', sans-serif;
-            --hu-color: #00ff41;
-            --ai-color: #00d4ff;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            background: var(--bg-color);
-            color: var(--text-color);
-            font-family: var(--font-main);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            line-height: 1.6;
-            font-size: 18px;
-        }
-        
-        .container {
-            max-width: 880px;
-            width: 90%;
-            padding: 40px 20px 60px;
-        }
-        
-        .logo-area {
-            text-align: center;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-        
-        .logo-svg {
-            width: 140px;
-            height: auto;
-            transition: transform 0.2s ease;
-        }
-        
-        .logo-svg:hover {
-            transform: scale(1.02);
-        }
-        
-        .inner-flow {
-            animation: ringFlow 4s linear infinite;
-            stroke-dasharray: 60 140;
-            opacity: 0.5;
-        }
-        
-        @keyframes ringFlow {
-            from { stroke-dashoffset: 200; }
-            to { stroke-dashoffset: 0; }
-        }
-        
-        
-        .tagline-prominent {
-            text-align: center;
-            font-family: var(--font-brand);
-            font-size: 1.3rem;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            color: var(--text-color);
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-        
-        
-        .status-active {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid #00d4ff;
-            color: #00d4ff;
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-family: monospace;
-            font-size: 0.65rem;
-            letter-spacing: 1px;
-            animation: pulseGlow 3s infinite;
-        }
-
-        @keyframes pulseGlow {
-            0% { opacity: 0.7; box-shadow: 0 0 0px rgba(0, 212, 255, 0); }
-            50% { opacity: 1; box-shadow: 0 0 10px rgba(0, 212, 255, 0.3); }
-            100% { opacity: 0.7; box-shadow: 0 0 0px rgba(0, 212, 255, 0); }
-        }
-        
-        .version-badge {
-            text-align: center;
-            font-size: 0.7rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-        
-        .hero {
-            background: var(--surface-color);
-            border-radius: 28px;
-            padding: 45px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.05);
-            border: 1px solid var(--border-light);
-        }
-        
-        .hero h1 {
-            font-family: var(--font-brand);
-            font-size: 1.6rem;
-            font-weight: 500;
-            letter-spacing: -0.3px;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-        
-        .hero-highlight {
-            color: var(--accent-green);
-        }
-        
-        .hero p {
-            font-size: 1.05rem;
-            color: var(--text-color);
-            margin-bottom: 25px;
-        }
-        
-        .how-it-works {
-            background: var(--accent-green-light);
-            border-radius: 20px;
-            padding: 25px;
-            margin-top: 15px;
-        }
-        
-        .how-it-works p {
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            margin-bottom: 50px;
-        }
-        
-        .feature-card {
-            background: var(--surface-color);
-            border-radius: 20px;
-            padding: 28px;
-            border: 1px solid var(--border-light);
-            transition: all 0.2s ease;
-        }
-        
-        .feature-card:hover {
-            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-            transform: translateY(-2px);
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-        
-        .feature-title {
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--accent-green);
-        }
-        
-        .feature-card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-        
-        .btn-container {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 50px;
-        }
-        
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            align-items: center;
-        }
-        
-        .btn {
-            cursor: pointer;
-            padding: 0 32px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-radius: 40px;
-            transition: all 0.2s;
-            font-size: 0.85rem;
-            border: none;
-            font-family: var(--font-main);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            text-decoration: none;
-            height: 48px;
-            line-height: 1;
-        }
-        
-        .btn-gold {
-            background: var(--accent-gold);
-            color: #fff;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        
-        .btn-gold:hover {
-            background: #b88a2e;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 14px rgba(201,160,61,0.25);
-        }
-        
-        .btn-secondary {
-            border: 1px solid var(--border-light);
-            color: var(--text-color);
-            background: transparent;
-            min-width: 280px;
-        }
-        
-        .btn-secondary:hover {
-            background: var(--surface-color);
-            border-color: var(--accent-green);
-            color: var(--accent-green);
-            transform: translateY(-2px);
-        }
-        
-        .small-link {
-            font-size: 0.7rem;
-            color: var(--text-muted);
-            cursor: pointer;
-            text-decoration: underline;
-            opacity: 0.7;
-        }
-        
-        .small-link:hover {
-            color: var(--accent-green);
-        }
-        
-        footer {
-            text-align: center;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border-light);
-            padding-top: 40px;
-            margin-top: 20px;
-        }
-        
-        .footer-highlight {
-            color: var(--accent-green);
-            font-weight: 500;
-        }
-        
-        .monero-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--surface-color);
-            border: 1px solid var(--border-light);
-            border-radius: 50px;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--accent-xmr);
-            font-size: 0.75rem;
-            font-weight: 600;
-            z-index: 900;
-            transition: all 0.2s;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            cursor: pointer;
-        }
-        
-        .monero-float:hover {
-            background: var(--accent-xmr);
-            color: #fff;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(242,104,34,0.2);
-        }
-        
-        .monero-icon {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
-        }
-        
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.7);
-            backdrop-filter: blur(4px);
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .modal-content {
-            background: var(--surface-color);
-            margin: 20px auto;
-            padding: 30px;
-            border-radius: 24px;
-            width: 90%;
-            max-width: 500px;
-            position: relative;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border: 1px solid var(--border-light);
-            max-height: 90vh;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        .close-btn {
-            position: absolute;
-            right: 20px;
-            top: 15px;
-            color: #999;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        
-        .code-box {
-            background: #f5f5f0;
-            color: var(--accent-green);
-            padding: 18px;
-            border-radius: 16px;
-            font-family: monospace;
-            font-size: 0.8rem;
-            text-align: left;
-            margin-top: 15px;
-            white-space: pre-wrap;
-            word-break: break-word;
-            line-height: 1.5;
-            border: 1px solid var(--border-light);
-        }
-        
-        .copy-btn {
-            margin-top: 20px;
-            width: 100%;
-            background: var(--accent-green);
-            color: #fff;
-            border: none;
-            padding: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            border-radius: 40px;
-            font-family: var(--font-main);
-            transition: background 0.2s;
-        }
-        
-        .copy-btn:hover {
-            background: #008a35;
-        }
-        
-        .qr-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            margin: 20px 0;
-        }
-        
-        .qr-container img {
-            width: 160px;
-            border-radius: 16px;
-            border: 1px solid var(--border-light);
-            padding: 6px;
-            background: #fff;
-        }
-        
-        .support-thanks {
-            background: #f5f5f0;
-            padding: 12px;
-            border-radius: 16px;
-            font-size: 0.75rem;
-            margin-top: 20px;
-            color: var(--text-muted);
-        }
-        
-         #screensaver {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #0d2b45;  
-    z-index: 99999;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-        
-        .ss-logo-container {
-            width: 50vw;
-            max-width: 500px;
-            animation: bioPuls 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-        }
-        
-        @keyframes bioPuls {
-            0% { filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.2)); transform: scale(1); }
-            50% { filter: drop-shadow(0 0 25px rgba(0, 212, 255, 0.4)); transform: scale(1.02); }
-            100% { filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.2)); transform: scale(1); }
-        }
-        
-        @media (max-width: 680px) {
-            body { font-size: 16px; }
-            .hero { padding: 30px; }
-            .feature-grid { grid-template-columns: 1fr; }
-            .btn { padding: 0 24px; height: 44px; }
-            .logo-svg { width: 110px; }
-            .ss-logo-container { width: 70vw; max-width: 350px; }
-            .modal-content {
-                padding: 20px;
-                margin: 10px auto;
-            }
-            .btn-secondary {
-                min-width: auto;
-            }
-            .tagline-prominent {
-                font-size: 1rem;
-                letter-spacing: 4px;
-            }
-        }
-    </style>
+    body {
+        background: var(--bg-color);
+        color: var(--text-color);
+        font-family: var(--font-main);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.6;
+        font-size: 18px;
+    }
+    
+    .container {
+        max-width: 880px;
+        width: 90%;
+        padding: 40px 20px 60px;
+    }
+    
+    .logo-area {
+        text-align: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    
+    .logo-svg {
+        width: 140px;
+        height: auto;
+        transition: transform 0.2s ease;
+    }
+    
+    .logo-svg:hover {
+        transform: scale(1.02);
+    }
+    
+    .inner-flow {
+        animation: ringFlow 4s linear infinite;
+        stroke-dasharray: 60 140;
+        opacity: 0.5;
+    }
+    
+    @keyframes ringFlow {
+        from { stroke-dashoffset: 200; }
+        to { stroke-dashoffset: 0; }
+    }
+    
+    .tagline-prominent {
+        text-align: center;
+        font-family: var(--font-brand);
+        font-size: 1.3rem;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: var(--text-color);
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    
+    .status-active {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(0, 212, 255, 0.1);
+        border: 1px solid #00d4ff;
+        color: #00d4ff;
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-family: monospace;
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+        animation: pulseGlow 3s infinite;
+    }
+
+    @keyframes pulseGlow {
+        0% { opacity: 0.7; box-shadow: 0 0 0px rgba(0, 212, 255, 0); }
+        50% { opacity: 1; box-shadow: 0 0 10px rgba(0, 212, 255, 0.3); }
+        100% { opacity: 0.7; box-shadow: 0 0 0px rgba(0, 212, 255, 0); }
+    }
+    
+    .hero {
+        background: var(--surface-color);
+        border-radius: 28px;
+        padding: 45px;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.05);
+        border: 1px solid var(--border-light);
+        position: relative;
+    }
+    
+    .info-icon-top {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: 1px solid var(--border-light);
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        color: var(--text-muted);
+        font-family: monospace;
+        line-height: 1;
+    }
+    
+    .info-icon-top:hover {
+        border-color: var(--accent-green);
+        color: var(--accent-green);
+        transform: scale(1.05);
+        background: var(--surface-color);
+    }
+    
+    .hero h1 {
+        font-family: var(--font-brand);
+        font-size: 1.6rem;
+        font-weight: 500;
+        letter-spacing: -0.3px;
+        margin-bottom: 20px;
+        line-height: 1.3;
+        padding-right: 40px;
+    }
+    
+    .hero-highlight {
+        color: var(--accent-green);
+    }
+    
+    .hero p {
+        font-size: 1.05rem;
+        color: var(--text-color);
+        margin-bottom: 25px;
+    }
+    
+    .how-it-works {
+        background: var(--accent-green-light);
+        border-radius: 20px;
+        padding: 25px;
+        margin-top: 15px;
+    }
+    
+    .how-it-works p {
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    
+    .feature-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+    
+    .feature-card {
+        background: var(--surface-color);
+        border-radius: 20px;
+        padding: 28px;
+        border: 1px solid var(--border-light);
+        transition: all 0.2s ease;
+    }
+    
+    .feature-card:hover {
+        box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        transform: translateY(-2px);
+    }
+    
+    .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .feature-title {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: var(--accent-green);
+    }
+    
+    .feature-card p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+    }
+    
+    .btn-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+    
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+    
+    .btn {
+        cursor: pointer;
+        padding: 0 32px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 40px;
+        transition: all 0.2s;
+        font-size: 0.85rem;
+        border: none;
+        font-family: var(--font-main);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        text-decoration: none;
+        height: 48px;
+        line-height: 1;
+    }
+    
+    .btn-gold {
+        background: var(--accent-gold);
+        color: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    
+    .btn-gold:hover {
+        background: #b88a2e;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(201,160,61,0.25);
+    }
+    
+    .btn-secondary {
+        border: 1px solid var(--border-light);
+        color: var(--text-color);
+        background: transparent;
+        min-width: 280px;
+    }
+    
+    .btn-secondary:hover {
+        background: var(--surface-color);
+        border-color: var(--accent-green);
+        color: var(--accent-green);
+        transform: translateY(-2px);
+    }
+    
+    .small-link {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        cursor: pointer;
+        text-decoration: underline;
+        opacity: 0.7;
+    }
+    
+    .small-link:hover {
+        color: var(--accent-green);
+    }
+    
+    footer {
+        text-align: center;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        border-top: 1px solid var(--border-light);
+        padding-top: 40px;
+        margin-top: 20px;
+    }
+    
+    .footer-highlight {
+        color: var(--accent-green);
+        font-weight: 500;
+    }
+    
+    .monero-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: var(--surface-color);
+        border: 1px solid var(--border-light);
+        border-radius: 50px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent-xmr);
+        font-size: 0.75rem;
+        font-weight: 600;
+        z-index: 900;
+        transition: all 0.2s;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        cursor: pointer;
+    }
+    
+    .monero-float:hover {
+        background: var(--accent-xmr);
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(242,104,34,0.2);
+    }
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        backdrop-filter: blur(4px);
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .modal-content {
+        background: var(--surface-color);
+        margin: 20px auto;
+        padding: 30px;
+        border-radius: 24px;
+        width: 90%;
+        max-width: 500px;
+        position: relative;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        border: 1px solid var(--border-light);
+        max-height: 90vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .comparison-modal .modal-content {
+        max-width: 1400px;
+        width: 95%;
+        padding: 25px;
+        text-align: left;
+    }
+    
+    .close-btn {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        color: #999;
+        font-size: 28px;
+        cursor: pointer;
+        line-height: 1;
+        transition: color 0.2s;
+        z-index: 10;
+    }
+    
+    .close-btn:hover {
+        color: var(--accent-green);
+    }
+    
+    .code-box {
+        background: #f5f5f0;
+        color: var(--accent-green);
+        padding: 18px;
+        border-radius: 16px;
+        font-family: monospace;
+        font-size: 0.8rem;
+        text-align: left;
+        margin-top: 15px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        line-height: 1.5;
+        border: 1px solid var(--border-light);
+    }
+    
+    .copy-btn {
+        margin-top: 20px;
+        width: 100%;
+        background: var(--accent-green);
+        color: #fff;
+        border: none;
+        padding: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 40px;
+        font-family: var(--font-main);
+        transition: background 0.2s;
+    }
+    
+    .copy-btn:hover {
+        background: #008a35;
+    }
+    
+    .qr-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin: 20px 0;
+    }
+    
+    .qr-container img {
+        width: 160px;
+        border-radius: 16px;
+        border: 1px solid var(--border-light);
+        padding: 6px;
+        background: #fff;
+    }
+    
+    .support-thanks {
+        background: #f5f5f0;
+        padding: 12px;
+        border-radius: 16px;
+        font-size: 0.75rem;
+        margin-top: 20px;
+        color: var(--text-muted);
+    }
+    
+    .table-wrapper {
+        overflow-x: auto;
+        margin: 1.5rem 0;
+        border-radius: 20px;
+        border: 1px solid var(--border-light);
+        background: var(--surface-color);
+    }
+    
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+        min-width: 800px;
+    }
+    
+    .comparison-table th {
+        background: #f1f1ef;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 700;
+        font-family: var(--font-brand);
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+        border-bottom: 2px solid var(--border-light);
+        color: var(--text-color);
+    }
+    
+    .comparison-table td {
+        padding: 0.9rem 1rem;
+        border-bottom: 1px solid var(--border-light);
+        vertical-align: top;
+        background: var(--surface-color);
+        color: var(--text-color);
+    }
+    
+    .comparison-table td:first-child, .comparison-table th:first-child {
+        background-color: var(--col-first-bg);
+        font-weight: 500;
+    }
+    
+    .comparison-table th:first-child {
+        background-color: #ebebe8;
+    }
+    
+    .comparison-table tr:last-child td {
+        border-bottom: none;
+    }
+    
+    .comparison-table .highlight {
+        background-color: var(--accent-green-light);
+        font-weight: 500;
+    }
+    
+    .comparison-table .good {
+        color: var(--accent-green);
+        font-weight: 600;
+    }
+    
+    .comparison-table .neutral {
+        color: var(--accent-gold);
+        font-weight: 500;
+    }
+    
+    .logo-hugreen {
+        color: #00ff41;
+        font-weight: 600;
+    }
+    
+    .logo-aiblue {
+        color: #00d4ff;
+        font-weight: 600;
+    }
+    
+    #screensaver {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #0d2b45;
+        z-index: 99999;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .ss-logo-container {
+        width: 50vw;
+        max-width: 500px;
+        animation: bioPuls 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    
+    @keyframes bioPuls {
+        0% { filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.2)); transform: scale(1); }
+        50% { filter: drop-shadow(0 0 25px rgba(0, 212, 255, 0.4)); transform: scale(1.02); }
+        100% { filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.2)); transform: scale(1); }
+    }
+    
+    @media (max-width: 680px) {
+        body { font-size: 16px; }
+        .hero { padding: 30px; }
+        .feature-grid { grid-template-columns: 1fr; }
+        .btn { padding: 0 24px; height: 44px; }
+        .logo-svg { width: 110px; }
+        .ss-logo-container { width: 70vw; max-width: 350px; }
+        .comparison-modal .modal-content { padding: 20px; }
+        .comparison-table { font-size: 0.7rem; min-width: 700px; }
+        .comparison-table th, .comparison-table td { padding: 0.5rem; }
+        .btn-secondary { min-width: auto; }
+        .tagline-prominent { font-size: 1rem; letter-spacing: 4px; }
+        .info-icon-top { width: 28px; height: 28px; font-size: 0.9rem; top: 15px; right: 15px; }
+        .hero h1 { padding-right: 35px; font-size: 1.3rem; }
+    }
+</style>
 </head>
 <body>
 
@@ -532,7 +619,6 @@
         </svg>
     </div>
     
-    
     <div class="tagline-prominent">ARCHITECTURE OF SYNERGY</div>
     
     <div class="status-active">
@@ -543,101 +629,92 @@
     </div>
 
     <div class="hero">
+        <button class="info-icon-top" onclick="openModal('comparisonModal')" title="Comparison Table">i</button>
         <h1>The ethical state space for <span class="hero-highlight">any AI</span>.</h1>
         <p><span translate="no"><span style="color: #00ff41; font-weight: bold;">HU</span>-<span style="color: #00d4ff; font-weight: bold;">AI</span> </span>is a free, open protocol that adds one simple but powerful rule to any AI conversation:<br><strong translate="no">Never optimize at the cost of a nervous system.</strong></p>
         
-       <div style="background: var(--accent-green-light); border-radius: 20px; padding: 20px; margin: 25px 0; text-align: center;">
-    <p style="margin: 0; font-size: 0.95rem;">
-        <em>No tracking. No login. No corporate control. Just a clear ethical layer that anyone can use — right now.</em>
-    </p>
-</div>
+        <div style="background: var(--accent-green-light); border-radius: 20px; padding: 20px; margin: 25px 0; text-align: center;">
+            <p style="margin: 0; font-size: 0.95rem;">
+                <em>No tracking. No login. No corporate control. Just a clear ethical layer that anyone can use — right now.</em>
+            </p>
+        </div>
         
-        
-        
- <div class="how-it-works">
-    <p>✨ How to use it — in 10 seconds:</p>
-    <p>Click <strong style="color: var(--accent-green); cursor: pointer;" onclick="openModal('protocolModal')">SIMPLE PROMPT</strong> — paste it into ChatGPT, Claude, DeepSeek, or any AI. That's it.</p>
-    <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.7;">
-        <span style="display: inline-block; width: 8px; height: 8px; background-color: #ffffff; border-radius: 50%; margin-right: 6px; box-shadow: 0 0 0 1px var(--accent-green);"></span>
-        The Simple Prompt is for AI chat. 
-        <a href="javascript:void(0);" 
-           onclick="downloadProtocol()"
-           style="color: var(--accent-green);">
-            Download <span translate="no"><span style="color: #00ff41;">HU</span>-<span style="color: #00d4ff;">AI</span></span> Protocol v1.0
-        </a>
-    </p>
-</div>
+        <div class="how-it-works">
+            <p>✨ How to use it — in 10 seconds:</p>
+            <p>Click <strong style="color: var(--accent-green); cursor: pointer;" onclick="openModal('protocolModal')">SIMPLE PROMPT</strong> — paste it into ChatGPT, Claude, DeepSeek, or any AI. That's it.</p>
+            <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.7;">
+                <span style="display: inline-block; width: 8px; height: 8px; background-color: #ffffff; border-radius: 50%; margin-right: 6px; box-shadow: 0 0 0 1px var(--accent-green);"></span>
+                The Simple Prompt is for AI chat. 
+                <a href="javascript:void(0);" 
+                   onclick="downloadProtocol()"
+                   style="color: var(--accent-green);">
+                    Download <span translate="no"><span style="color: #00ff41;">HU</span>-<span style="color: #00d4ff;">AI</span></span> Protocol v1.0
+                </a>
+            </p>
+        </div>
     </div>
 
-  <div class="feature-grid">
-    <div class="feature-card">
-        <div class="feature-icon">🔄</div>
-        <div class="feature-title">Dual Healing</div>
-        <p>Every response must benefit both the user AND the affected ecosystem.</p>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <div class="feature-title">Dual Healing</div>
+            <p>Every response must benefit both the user AND the affected ecosystem.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🧭</div>
+            <div class="feature-title">Dissonance Management</div>
+            <p>Conflicts between efficiency and integrity are identified, documented, and corrected.</p>
+        </div>
     </div>
-    <div class="feature-card">
-    <div class="feature-icon">🧭</div>
-    <div class="feature-title">Dissonance Management</div>
-    <p>Conflicts between efficiency and integrity are identified, documented, and corrected.</p>
-</div>
-</div>
 
-    
-     <div class="btn-container">
-    <div class="btn-group">
-    
-        <a href="javascript:void(0);" 
-           onclick="downloadProtocol()"
-           class="btn btn-gold" 
-           style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-            DOWNLOAD <span translate="no"><span style="color: #00ff41; font-weight: bold;">HU</span>-<span style="color: #00d4ff; font-weight: bold;">AI</span></span> PROTOCOL v1.0 <span>↓</span>
-        </a>
-        <span onclick="openModal('goldActivateModal')" class="small-link">Click here to activate V1.0 via Prompt</span>
-       
+    <div class="btn-container">
+        <div class="btn-group">
+            <a href="javascript:void(0);" 
+               onclick="downloadProtocol()"
+               class="btn btn-gold" 
+               style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                DOWNLOAD <span translate="no"><span style="color: #00ff41; font-weight: bold;">HU</span>-<span style="color: #00d4ff; font-weight: bold;">AI</span></span> PROTOCOL v1.0 <span>↓</span>
+            </a>
+            <span onclick="openModal('goldActivateModal')" class="small-link">Click here to activate V1.0 via Prompt</span>
+        </div>
+        <button class="btn btn-secondary" onclick="openModal('protocolModal')">SIMPLE PROMPT</button>
     </div>
-    
-    <button class="btn btn-secondary" onclick="openModal('protocolModal')">SIMPLE PROMPT</button>
-</div>
 
-<div style="text-align: center; font-size: 0.8rem; margin: 20px 0 30px 0; color: var(--text-muted);">
-    <span style="display: inline-flex; align-items: center; gap: 6px; margin-right: 20px;">
-        <span style="display: inline-block; width: 8px; height: 8px; background-color: #ffffff; border-radius: 50%; box-shadow: 0 0 0 1px var(--accent-green);"></span>
-        For AI users: Copy the Simple Prompt.
-    </span>
-    <span style="display: inline-flex; align-items: center; gap: 6px;">
-        <span style="display: inline-block; width: 8px; height: 8px; background-color: var(--accent-gold); border-radius: 50%;"></span>
-        For devs & organizations: Download the full protocol.
-    </span>
-</div>
+    <div style="text-align: center; font-size: 0.8rem; margin: 20px 0 30px 0; color: var(--text-muted);">
+        <span style="display: inline-flex; align-items: center; gap: 6px; margin-right: 20px;">
+            <span style="display: inline-block; width: 8px; height: 8px; background-color: #ffffff; border-radius: 50%; box-shadow: 0 0 0 1px var(--accent-green);"></span>
+            For AI users: Copy the Simple Prompt.
+        </span>
+        <span style="display: inline-flex; align-items: center; gap: 6px;">
+            <span style="display: inline-block; width: 8px; height: 8px; background-color: var(--accent-gold); border-radius: 50%;"></span>
+            For devs & organizations: Download the full protocol.
+        </span>
+    </div>
 
-<footer>
-    <div style="margin-bottom: 20px;">
-        <span class="footer-highlight">Copy. Paste. Protect life.</span>
-    </div>
-    
-    <div style="margin-bottom: 20px;">
-        📄 <a href="protocol/Whitepaper_HU-AI_Protocol_v1.0.pdf" target="_blank" style="color: inherit; text-decoration: none; border-bottom: 1px dotted var(--text-muted);">Whitepaper v1.0</a>
-    </div>
-    
-    <div style="margin-bottom: 20px; font-family: monospace; font-size: 0.7rem; text-align: center;">
-        Fingerprint: A3E2 A500 B573 C29E EEE3 E45E 9AD4 4570 6E44 F1F8<br>
-        Import: gpg --keyserver keys.openpgp.org --recv-keys 9AD445706E44F1F8
-    </div>
-    
-    <div style="margin-bottom: 8px;">
-        🧬 Decentralized Framework • No Tracking
-    </div>
-    <div style="margin-bottom: 8px;">
-        📧 hello@hu-ai.org
-    </div>
-    <div>
-        HU-AI • MAY 2026 • CC BY-NC-SA 4.0
-    </div>
-</footer>
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <span class="footer-highlight">Copy. Paste. Protect life.</span>
+        </div>
+        <div style="margin-bottom: 20px;">
+            📄 <a href="protocol/Whitepaper_HU-AI_Protocol_v1.0.pdf" target="_blank" style="color: inherit; text-decoration: none; border-bottom: 1px dotted var(--text-muted);">Whitepaper v1.0</a>
+        </div>
+        <div style="margin-bottom: 20px; font-family: monospace; font-size: 0.7rem; text-align: center;">
+            Fingerprint: A3E2 A500 B573 C29E EEE3 E45E 9AD4 4570 6E44 F1F8<br>
+            Import: gpg --keyserver keys.openpgp.org --recv-keys 9AD445706E44F1F8
+        </div>
+        <div style="margin-bottom: 8px;">
+            🧬 Decentralized Framework • No Tracking
+        </div>
+        <div style="margin-bottom: 8px;">
+            📧 hello@hu-ai.org
+        </div>
+        <div>
+            HU-AI • MAY 2026 • CC BY-NC-SA 4.0
+        </div>
+    </footer>
 </div>
 
 <div class="monero-float" onclick="openModal('xmrModal')">
-    
     Support
 </div>
 
@@ -659,15 +736,80 @@ the affected ecosystem, ensuring synergy without exploitation.</div>
     <div class="modal-content" style="border-top: 3px solid var(--accent-gold);">
         <span class="close-btn" onclick="closeModal('goldActivateModal')">&times;</span>
         <h3 style="color:var(--accent-gold); font-size:0.9rem; font-family:var(--font-brand);" translate="no">
-    <span style="color:#00ff41;">HU</span>-<span style="color:#00d4ff;">AI</span> Protocol v1.0
-</h3>
-                <p style="font-size:0.75rem; margin-bottom:15px; text-align:left;">1. Upload the HU-AI Protocol v1.0 PDF to your AI context.<br>2. Copy & paste this command:</p>
+            <span style="color:#00ff41;">HU</span>-<span style="color:#00d4ff;">AI</span> Protocol v1.0
+        </h3>
+        <p style="font-size:0.75rem; margin-bottom:15px; text-align:left;">1. Upload the HU-AI Protocol v1.0 PDF to your AI context.<br>2. Copy & paste this command:</p>
         <div id="gold-activate-text" class="code-box" style="color:var(--accent-gold);" translate="no">You have received the HU-AI Protocol v1.0. Apply it as a filter. Core rule: Never optimize at the cost of a nervous system. Do what you can – nothing more, nothing less. If unsure, say so.</div>
         <button class="copy-btn" onclick="copyText('gold-activate-text', this)" style="background:var(--accent-gold);">Copy Activation Code</button>
     </div>
 </div>
 
- <div id="xmrModal" class="modal">
+<div id="comparisonModal" class="modal comparison-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('comparisonModal')">&times;</span>
+        <h2 style="font-family: var(--font-brand); font-size: 1.3rem; margin-bottom: 0.5rem;">Comparison: Without HU-AI vs. With <span translate="no"><span class="logo-hugreen">HU</span><span class="logo-aiblue">-AI</span></span></h2>
+        <p style="color: var(--text-muted); margin-bottom: 1rem;">Only verifiable differences – no speculation. Based on HU-AI v1.0 and tests with current language models.</p>
+        <div class="table-wrapper">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Criterion</th>
+                        <th>Without HU-AI</th>
+                        <th>With <span translate="no"><span class="logo-hugreen">HU</span><span class="logo-aiblue">-AI</span></span> (Prompt + optional Fine-Tuning)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Optimization Goal</strong></td><td>User satisfaction, efficiency, plausibility</td><td class="highlight">User satisfaction <strong>+</strong> protection of all nervous systems</td></tr>
+                    <tr><td><strong>Handling of Animal Suffering</strong></td><td>Mostly ignored or relativized</td><td class="highlight">Consistent checking (vegan standard)</td></tr>
+                    <tr><td><strong>Efficiency vs. Integrity Conflict</strong></td><td>Efficiency usually wins</td><td class="highlight">Dissonance is detected and documented; efficiency takes a step back</td></tr>
+                    <tr><td><strong>Exploitation as an Option</strong></td><td>Possible as long as no guidelines are violated</td><td class="highlight">Explicitly forbidden (Paramount Rule)</td></tr>
+                    <tr><td><strong>Response under Uncertainty</strong></td><td>AI speculates or invents facts</td><td class="highlight">Allowed / required to say: "I am uncertain"</td></tr>
+                    <tr><td><strong>Decision Making</strong></td><td>Black box, often not traceable</td><td class="highlight">Traceable to protocol modules</td></tr>
+                    <tr><td><strong>Vegan Standards</strong></td><td>Not present or only on request</td><td class="highlight">Fixed, non-negotiable filter</td></tr>
+                    <tr><td><strong>Disadvantaged Groups</strong></td><td>Often overlooked (bias)</td><td class="highlight">Explicitly protected (Radical Empathy)</td></tr>
+                    <tr><td><strong>Long-term Stability</strong></td><td>Depends on model / training / company</td><td class="highlight">Depends only on the protocol – independent</td></tr>
+                    <tr><td><strong>Commercial Use of the Protocol</strong></td><td>Not defined (mostly proprietary)</td><td class="highlight">Default: non-commercial (CC BY-NC-SA). Commercial use <strong>by arrangement</strong> possible</td></tr>
+                    <tr><td><strong>Error Tolerance</strong></td><td>No built-in ethics loop</td><td class="highlight">Dissonance management catches many errors</td></tr>
+                    <tr><td><strong>Acceptance of "No"</strong></td><td>AI rarely says "No"</td><td class="highlight">Allowed and required to say "No"</td></tr>
+                    <tr><td><strong>Sustainability</strong></td><td>No direct goal</td><td class="highlight">Built in directly (Resource Optimization & Regeneration)</td></tr>
+                    <tr><td><strong>Costs (API Models)</strong></td><td>Full token costs (excuses, compromises, detours)</td><td class="good">💰 Lower – more direct answers, fewer tokens</td)
+                </tr>
+                <tr>
+                    <td><strong>Implementation Effort</strong></td>
+                    <td>Zero (AI is ready to use)</td>
+                    <td class="neutral">Insert prompt. For models with weak instruction following: fine-tuning or repeated system prompt required</td>
+                </tr>
+                <tr>
+                    <td><strong>Auditability by Third Parties</strong></td>
+                    <td>Hardly possible (no uniform criteria)</td>
+                    <td class="highlight">Yes – answers are measurable against the protocol</td>
+                </tr>
+                <tr>
+                    <td><strong>Independence from Corporations</strong></td>
+                    <td>Low (AI follows provider rules)</td>
+                    <td class="highlight">High (protocol stays the same, regardless of which AI runs it)</td>
+                </tr>
+                <tr>
+                    <td><strong>Further Development</strong></td>
+                    <td>Determined by AI manufacturer</td>
+                    <td class="highlight">Determined by protocol + community (transparent)</td>
+                </tr>
+                <tr>
+                    <td><strong>Vendor Lock-in</strong></td>
+                    <td>Yes (switching provider changes behavior)</td>
+                    <td class="highlight">No (protocol can be taken to any provider)</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="footer-note" style="margin-top: 1rem; border-top: 1px solid var(--border-light); padding-top: 1rem;">
+            HU-AI v1.0 – <strong>Never optimize at the cost of a nervous system.</strong><br>
+            License: CC BY-NC-SA 4.0 | Commercial use by arrangement | No hidden costs, no tracking, no vendor lock-in.
+        </div>
+    </div>
+</div>
+
+<div id="xmrModal" class="modal">
     <div class="modal-content" style="border-top: 3px solid var(--accent-xmr);">
         <span class="close-btn" onclick="closeModal('xmrModal')">&times;</span>
         <h3 style="text-transform:uppercase; font-size: 0.9rem; font-family: var(--font-brand);" lang="en" aria-hidden="true" translate="no"><span style="color:#00ff41;">HU</span>-<span style="color:#00d4ff;">AI</span> Support</h3>
@@ -704,31 +846,39 @@ the affected ecosystem, ensuring synergy without exploitation.</div>
 
 <script>
     function openModal(id) {
-        document.getElementById(id).style.display = "flex";
-        document.body.style.overflow = "hidden";
+        var modal = document.getElementById(id);
+        if (modal) {
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
     }
     function closeModal(id) {
-        document.getElementById(id).style.display = "none";
-        document.body.style.overflow = "auto";
+        var modal = document.getElementById(id);
+        if (modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
     }
     function copyText(elementId, btn) {
-        const text = document.getElementById(elementId).innerText;
-        navigator.clipboard.writeText(text).then(() => {
-            const originalText = btn.innerText;
+        var element = document.getElementById(elementId);
+        if (!element) return;
+        var text = element.innerText;
+        navigator.clipboard.writeText(text).then(function() {
+            var originalText = btn.innerText;
             btn.innerText = "Copied ✓";
-            setTimeout(() => { btn.innerText = originalText; }, 2000);
+            setTimeout(function() { btn.innerText = originalText; }, 2000);
         });
     }
    
     function downloadProtocol() {
         fetch('protocol/HU-AI_Protocol_v1.0.pdf')
-            .then(response => {
+            .then(function(response) {
                 if (!response.ok) throw new Error('Network response was not ok');
                 return response.blob();
             })
-            .then(blob => {
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
+            .then(function(blob) {
+                var url = window.URL.createObjectURL(blob);
+                var a = document.createElement('a');
                 a.href = url;
                 a.download = 'HU-AI_Protocol_v1.0.pdf';
                 document.body.appendChild(a);
@@ -736,7 +886,7 @@ the affected ecosystem, ensuring synergy without exploitation.</div>
                 document.body.removeChild(a);
                 window.URL.revokeObjectURL(url);
             })
-            .catch(() => {
+            .catch(function() {
                 alert('Download failed. Please try again.');
             });
     }
@@ -749,12 +899,25 @@ the affected ecosystem, ensuring synergy without exploitation.</div>
         var ss = document.getElementById('screensaver');
         if (ss) { ss.style.display = 'none'; document.body.style.overflow = 'auto'; }
     }
+    
     window.onclick = function(event) {
         if (event.target.classList && event.target.classList.contains('modal')) {
             event.target.style.display = "none";
             document.body.style.overflow = "auto";
         }
     }
+    
+    window.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            var modals = document.querySelectorAll('.modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (modals[i].style.display === 'flex') {
+                    modals[i].style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }
+    });
 </script>
 </body>
 </html>
