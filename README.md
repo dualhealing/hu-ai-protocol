@@ -15,8 +15,7 @@ The first ethical AI protocol with an absolute vegan standard.
 
 ## 🌐 Website
 
-👉 [hu-ai.org](https://hu-ai.org) – Download the protocol, copy the activation directive, test your AI.
-
+👉 **[hu-ai.org](https://hu-ai.org/)** – Download the protocol, copy the activation directive, test your AI.
 ---
 
 ## 🔴 The Red Line of Integrity (Primary Directive)
