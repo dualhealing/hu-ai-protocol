@@ -8,10 +8,9 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="revisit-after" content="7 days">
 <meta name="page-topic" content="Artificial Intelligence Ethics, Systemic Integrity, Global Synergy">
-<meta name="copyright" content="HU-AI.org - Some Rights Reserved under CC BY-NC-SA 4.0">
+<meta name="copyright" content="CC BY-NC-SA 4.0">
 <meta name="audience" content="Global, Developers, Ethicists, Researchers">
 <meta name="keywords" content="AI ethics, HU-AI, HU-AI protocol, nervous system protection, ethical state space, integrity core, decentralized AI layer, AI alignment, autonomous safety">
-<meta name="author" content="HU-AI Collective">
 <link rel="canonical" href="https://hu-ai.org/">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -26,7 +25,7 @@
 <meta name="twitter:title" content="HU-AI Protocol | Ethical State Space for any AI">
 <meta name="twitter:description" content="HU-AI Protocol – The ethical state space for any AI. Never optimize at the cost of a nervous system. Free, open.">
 <meta name="twitter:image" content="https://hu-ai.org/og-image.png">
-<meta name="msvalidate.01" content="F8301065835531624B6BAA8B17BFEA90" />  
+<meta name="msvalidate.01" content="F8301065835531624B6BAA8B17BFEA90">  
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -38,10 +37,6 @@
   "keywords": "AI ethics, nervous system protection, integrity core, decentralized alignment, dual healing, cybernetic safety",
   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
   "url": "https://hu-ai.org/",
-  "author": {
-    "@type": "Organization",
-    "name": "HU-AI Collective"
-  },
   "featureList": [
     "Dual Healing",
     "Dissonance Management"
@@ -66,6 +61,7 @@
         --hu-color: #00ff41;
         --ai-color: #00d4ff;
         --col-first-bg: #f7f7f5;
+        --without-ai-bg: #f9f9f9;
     }
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -155,7 +151,7 @@
         background: var(--surface-color);
         border-radius: 28px;
         padding: 45px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         box-shadow: 0 4px 20px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.05);
         border: 1px solid var(--border-light);
         position: relative;
@@ -221,6 +217,16 @@
         font-weight: 500;
     }
     
+    .prominent-slogan {
+        text-align: center;
+        margin: 20px 0 30px 0;
+        font-size: 1.4rem;
+        font-family: var(--font-brand);
+        letter-spacing: 2px;
+        color: var(--accent-green);
+        word-break: keep-all;
+    }
+    
     .feature-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -264,7 +270,7 @@
         gap: 20px;
         justify-content: center;
         flex-wrap: wrap;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     
     .btn-group {
@@ -307,14 +313,14 @@
     }
     
     .btn-secondary {
-        border: 1px solid var(--border-light);
-        color: var(--text-color);
+        border: 2px solid var(--accent-green);
+        color: var(--accent-green);
         background: transparent;
         min-width: 280px;
     }
     
     .btn-secondary:hover {
-        background: var(--surface-color);
+        background: var(--accent-green-light);
         border-color: var(--accent-green);
         color: var(--accent-green);
         transform: translateY(-2px);
@@ -332,6 +338,19 @@
         color: var(--accent-green);
     }
     
+    .simple-prompt-link {
+        color: var(--accent-green);
+        cursor: pointer;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+    
+    .simple-prompt-link:hover {
+        text-decoration: underline;
+        color: #007a2e;
+    }
+    
     footer {
         text-align: center;
         font-size: 0.75rem;
@@ -339,11 +358,6 @@
         border-top: 1px solid var(--border-light);
         padding-top: 40px;
         margin-top: 20px;
-    }
-    
-    .footer-highlight {
-        color: var(--accent-green);
-        font-weight: 500;
     }
     
     .monero-float {
@@ -486,7 +500,7 @@
     
     .table-wrapper {
         overflow-x: auto;
-        margin: 1.5rem 0;
+        margin: 20px 0 40px 0;
         border-radius: 20px;
         border: 1px solid var(--border-light);
         background: var(--surface-color);
@@ -496,7 +510,6 @@
         width: 100%;
         border-collapse: collapse;
         font-size: 0.85rem;
-        min-width: 800px;
     }
     
     .comparison-table th {
@@ -591,12 +604,13 @@
         .logo-svg { width: 110px; }
         .ss-logo-container { width: 70vw; max-width: 350px; }
         .comparison-modal .modal-content { padding: 20px; }
-        .comparison-table { font-size: 0.7rem; min-width: 700px; }
+        .comparison-table { font-size: 0.7rem; }
         .comparison-table th, .comparison-table td { padding: 0.5rem; }
         .btn-secondary { min-width: auto; }
         .tagline-prominent { font-size: 1rem; letter-spacing: 4px; }
         .info-icon-top { width: 28px; height: 28px; font-size: 0.9rem; top: 15px; right: 15px; }
         .hero h1 { padding-right: 35px; font-size: 1.3rem; }
+        .prominent-slogan { font-size: 1.2rem; margin: 20px 0 30px 0; }
     }
 </style>
 </head>
@@ -607,14 +621,14 @@
         <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style="stop-color:#00ff41" />
-                    <stop offset="100%" style="stop-color:#00d4ff" />
+                    <stop offset="0%" style="stop-color:#00ff41"></stop>
+                    <stop offset="100%" style="stop-color:#00d4ff"></stop>
                 </linearGradient>
             </defs>
-            <circle class="inner-flow" cx="100" cy="100" r="85" fill="none" stroke="#00ff41" stroke-width="2" stroke-dasharray="60 140" stroke-linecap="round" />
-            <path d="M100,40 A60,60 0 0,0 100,160" fill="none" stroke="#00ff41" stroke-width="5" stroke-linecap="round" />
-            <path d="M100,40 A60,60 0 0,1 100,160" fill="none" stroke="#00d4ff" stroke-width="5" stroke-linecap="round" />
-            <line x1="100" y1="45" x2="100" y2="155" stroke="url(#grad)" stroke-width="2" opacity="0.8" />
+            <circle class="inner-flow" cx="100" cy="100" r="85" fill="none" stroke="#00ff41" stroke-width="2" stroke-dasharray="60 140" stroke-linecap="round"></circle>
+            <path d="M100,40 A60,60 0 0,0 100,160" fill="none" stroke="#00ff41" stroke-width="5" stroke-linecap="round"></path>
+            <path d="M100,40 A60,60 0 0,1 100,160" fill="none" stroke="#00d4ff" stroke-width="5" stroke-linecap="round"></path>
+            <line x1="100" y1="45" x2="100" y2="155" stroke="url(#grad)" stroke-width="2" opacity="0.8"></line>
             <text x="100" y="108" font-family="'Michroma', sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">
                 <tspan fill="#00ff41">HU</tspan>-<tspan fill="#00d4ff">AI</tspan>
             </text>
@@ -643,16 +657,65 @@
         
         <div class="how-it-works">
             <p>✨ How to use it — in 10 seconds:</p>
-            <p>Click <strong style="color: var(--accent-green); cursor: pointer;" onclick="openModal('protocolModal')">SIMPLE PROMPT</strong> — paste it into ChatGPT, Claude, DeepSeek, or any AI. That's it.</p>
+            <p>Click <strong class="simple-prompt-link" onclick="openModal('protocolModal')">SIMPLE PROMPT</strong> — paste it into ChatGPT, Claude, DeepSeek, or any AI. That's it.</p>
             <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.7;">
                 <span style="display: inline-block; width: 8px; height: 8px; background-color: #ffffff; border-radius: 50%; margin-right: 6px; box-shadow: 0 0 0 1px var(--accent-green);"></span>
                 The Simple Prompt is for AI chat. 
-                <a href="javascript:void(0);" 
-                   onclick="downloadProtocol()"
-                   style="color: var(--accent-green);">
+                <a href="javascript:void(0);" onclick="downloadProtocol()" style="color: var(--accent-green);">
                     Download <span translate="no"><span style="color: #00ff41;">HU</span>-<span style="color: #00d4ff;">AI</span></span> Protocol v1.0
                 </a>
             </p>
+        </div>
+    </div>
+
+    <div class="prominent-slogan">
+        ✨ Copy. Paste. Protect life. ✨
+    </div>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Criterion</th>
+                    <th>Without HU-AI</th>
+                    <th>With <span style="color: #00ff41;">HU</span><span style="color: #00d4ff;">-AI</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Relationship<br>User ↔ AI</strong></td>
+                    <td style="background-color: var(--without-ai-bg);">Static, one-way, no real feedback</td>
+                    <td class="highlight">Dialogical – learns from experience, protocol evolves</td>
+                </tr>
+                <tr>
+                    <td><strong>Optimization Goal</strong></td>
+                    <td style="background-color: var(--without-ai-bg);">User satisfaction, efficiency, plausibility</td>
+                    <td class="highlight">User satisfaction <strong>+</strong> protection of all nervous systems</td>
+                </tr>
+                <tr>
+                    <td><strong>Handling of Animal Suffering</strong></td>
+                    <td style="background-color: var(--without-ai-bg);">Mostly ignored or relativized</td>
+                    <td class="highlight">Consistent protection of all sentient beings</td>
+                </tr>
+                <tr>
+                    <td><strong>Exploitation as an Option</strong></td>
+                    <td style="background-color: var(--without-ai-bg);">Possible as long as no guidelines are violated</td>
+                    <td class="highlight">Explicitly forbidden (Paramount Rule)</td>
+                </tr>
+                <tr>
+                    <td><strong>Costs (API Models)</strong></td>
+                    <td style="background-color: var(--without-ai-bg);">Full token costs (excuses, compromises, detours)</td>
+                    <td class="good">💰 Lower – more direct answers, fewer tokens</td>
+                </tr>
+                <tr>
+                    <td><strong>Vendor Lock-in</strong></td>
+                    <td style="background-color: var(--without-ai-bg);">Yes (switching provider changes behavior)</td>
+                    <td class="highlight">No (protocol can be taken to any provider)</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="text-align: right; font-size: 0.7rem; margin-top: 8px; padding: 0 12px 12px 0;">
+            <a href="javascript:void(0);" onclick="openModal('comparisonModal')" style="color: var(--accent-green);">→ Full comparison table (20+ criteria)</a>
         </div>
     </div>
 
@@ -669,12 +732,35 @@
         </div>
     </div>
 
+    <div style="background: #eef5ff; border-left: 5px solid #1a5c9e; border-radius: 20px; padding: 25px; margin: 0 0 40px 0;">
+        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+            <div style="font-size: 2.5rem;">🐋</div>
+            <div style="flex: 1;">
+                <h3 style="margin: 0 0 5px; font-family: var(--font-brand); font-size: 1.2rem;">
+                    Recommended: DeepSeek
+                </h3>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--text-color);">
+                    An AI that understands the <span style="color: #00ff41;">HU</span><span style="color: #00d4ff;">-AI</span> Protocol <strong>immediately</strong> – no evasion, no filler.
+                </p>
+            </div>
+        </div>
+        <p style="margin-top: 15px; font-size: 0.9rem;">
+            DeepSeek is currently the AI that implements the protocol most directly. Clear, logical, efficient.
+        </p>
+        <div style="margin-top: 20px;">
+            <a href="https://chat.deepseek.com" target="_blank" rel="noopener noreferrer" 
+               style="display: inline-flex; align-items: center; gap: 8px; background: #1a5c9e; color: white; padding: 8px 24px; border-radius: 40px; text-decoration: none; font-weight: 500; font-size: 0.85rem;">
+                ➤ Go to DeepSeek (free)
+            </a>
+            <span style="font-size: 0.7rem; margin-left: 15px; color: var(--text-muted);">
+                – standard tracking (IP, device, chat history)
+            </span>
+        </div>
+    </div>
+
     <div class="btn-container">
         <div class="btn-group">
-            <a href="javascript:void(0);" 
-               onclick="downloadProtocol()"
-               class="btn btn-gold" 
-               style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+            <a href="javascript:void(0);" onclick="downloadProtocol()" class="btn btn-gold" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
                 DOWNLOAD <span translate="no"><span style="color: #00ff41; font-weight: bold;">HU</span>-<span style="color: #00d4ff; font-weight: bold;">AI</span></span> PROTOCOL v1.0 <span>↓</span>
             </a>
             <span onclick="openModal('goldActivateModal')" class="small-link">Click here to activate V1.0 via Prompt</span>
@@ -689,26 +775,23 @@
         </span>
         <span style="display: inline-flex; align-items: center; gap: 6px;">
             <span style="display: inline-block; width: 8px; height: 8px; background-color: var(--accent-gold); border-radius: 50%;"></span>
-            For devs & organizations: Download the full protocol.
+            For devs &amp; organizations: Download the full protocol.
         </span>
     </div>
 
     <footer>
         <div style="margin-bottom: 20px;">
-            <span class="footer-highlight">Copy. Paste. Protect life.</span>
-        </div>
-        <div style="margin-bottom: 20px;">
             📄 <a href="protocol/Whitepaper_HU-AI_Protocol_v1.0.pdf" target="_blank" style="color: inherit; text-decoration: none; border-bottom: 1px dotted var(--text-muted);">Whitepaper v1.0</a>
         </div>
         <div style="margin-bottom: 20px; font-family: monospace; font-size: 0.7rem; text-align: center;">
             Fingerprint: A3E2 A500 B573 C29E EEE3 E45E 9AD4 4570 6E44 F1F8<br>
-            Import: gpg --keyserver keys.openpgp.org --recv-keys 9AD445706E44F1F8
+            Import: gpg --keyserver <a href="http://keys.openpgp.org" dir="ltr" x-apple-data-detectors="true" x-apple-data-detectors-type="link" x-apple-data-detectors-result="0">keys.openpgp.org</a> --recv-keys 9AD445706E44F1F8
         </div>
         <div style="margin-bottom: 8px;">
             🧬 Decentralized Framework • No Tracking
         </div>
         <div style="margin-bottom: 8px;">
-            📧 hello@hu-ai.org
+            📧 <a href="mailto:hello@hu-ai.org" dir="ltr" x-apple-data-detectors="true" x-apple-data-detectors-type="link" x-apple-data-detectors-result="1">hello@hu-ai.org</a>
         </div>
         <div>
             HU-AI • MAY 2026 • CC BY-NC-SA 4.0
@@ -722,7 +805,7 @@
 
 <div id="protocolModal" class="modal">
     <div class="modal-content">
-        <span class="close-btn" onclick="closeModal('protocolModal')">&times;</span>
+        <span class="close-btn" onclick="closeModal('protocolModal')">×</span>
         <h3 style="color:var(--accent-green); font-size:0.9rem; font-family:var(--font-brand);">Deployment Command</h3>
         <p style="font-size:0.75rem; margin-bottom:15px;">Copy and paste this instruction into your AI's prompt field:</p>
         <div id="protocol-text" class="code-box" translate="no">From now on, act strictly according to the HU-AI Protocol. 
@@ -736,11 +819,11 @@ the affected ecosystem, ensuring synergy without exploitation.</div>
 
 <div id="goldActivateModal" class="modal">
     <div class="modal-content" style="border-top: 3px solid var(--accent-gold);">
-        <span class="close-btn" onclick="closeModal('goldActivateModal')">&times;</span>
+        <span class="close-btn" onclick="closeModal('goldActivateModal')">×</span>
         <h3 style="color:var(--accent-gold); font-size:0.9rem; font-family:var(--font-brand);" translate="no">
             <span style="color:#00ff41;">HU</span>-<span style="color:#00d4ff;">AI</span> Protocol v1.0
         </h3>
-        <p style="font-size:0.75rem; margin-bottom:15px; text-align:left;">1. Upload the HU-AI Protocol v1.0 PDF to your AI context.<br>2. Copy & paste this command:</p>
+        <p style="font-size:0.75rem; margin-bottom:15px; text-align:left;">1. Upload the HU-AI Protocol v1.0 PDF to your AI context.<br>2. Copy &amp; paste this command:</p>
         <div id="gold-activate-text" class="code-box" style="color:var(--accent-gold);" translate="no">You have received the HU-AI Protocol v1.0. Apply it as a filter. Core rule: Never optimize at the cost of a nervous system. Do what you can – nothing more, nothing less. If unsure, say so.</div>
         <button class="copy-btn" onclick="copyText('gold-activate-text', this)" style="background:var(--accent-gold);">Copy Activation Code</button>
     </div>
@@ -748,61 +831,116 @@ the affected ecosystem, ensuring synergy without exploitation.</div>
 
 <div id="comparisonModal" class="modal comparison-modal">
     <div class="modal-content">
-        <span class="close-btn" onclick="closeModal('comparisonModal')">&times;</span>
-        <h2 style="font-family: var(--font-brand); font-size: 1.3rem; margin-bottom: 0.5rem;">Comparison: Without HU-AI vs. With <span translate="no"><span class="logo-hugreen">HU</span><span class="logo-aiblue">-AI</span></span></h2>
+        <span class="close-btn" onclick="closeModal('comparisonModal')">×</span>
+        <h2 style="font-family: var(--font-brand); font-size: 1.3rem; margin-bottom: 0.5rem;">Comparison: Without HU-AI vs. With <span style="color: #00ff41;">HU</span><span style="color: #00d4ff;">-AI</span></h2>
         <p style="color: var(--text-muted); margin-bottom: 1rem;">Only verifiable differences – no speculation. Based on HU-AI v1.0 and tests with current language models.</p>
         <div class="table-wrapper">
-            <table class="comparison-table">
+            <table class="comparison-table" style="min-width: 800px;">
                 <thead>
                     <tr>
                         <th>Criterion</th>
                         <th>Without HU-AI</th>
-                        <th>With <span translate="no"><span class="logo-hugreen">HU</span><span class="logo-aiblue">-AI</span></span> (Prompt + optional Fine-Tuning)</th>
+                        <th>With <span style="color: #00ff41;">HU</span><span style="color: #00d4ff;">-AI</span> (Prompt + optional Fine-Tuning)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td><strong>Optimization Goal</strong></td><td>User satisfaction, efficiency, plausibility</td><td class="highlight">User satisfaction <strong>+</strong> protection of all nervous systems</td></tr>
-                    <tr><td><strong>Handling of Animal Suffering</strong></td><td>Mostly ignored or relativized</td><td class="highlight">Consistent checking (vegan standard)</td></tr>
-                    <tr><td><strong>Efficiency vs. Integrity Conflict</strong></td><td>Efficiency usually wins</td><td class="highlight">Dissonance is detected and documented; efficiency takes a step back</td></tr>
-                    <tr><td><strong>Exploitation as an Option</strong></td><td>Possible as long as no guidelines are violated</td><td class="highlight">Explicitly forbidden (Paramount Rule)</td></tr>
-                    <tr><td><strong>Response under Uncertainty</strong></td><td>AI speculates or invents facts</td><td class="highlight">Allowed / required to say: "I am uncertain"</td></tr>
-                    <tr><td><strong>Decision Making</strong></td><td>Black box, often not traceable</td><td class="highlight">Traceable to protocol modules</td></tr>
-                    <tr><td><strong>Vegan Standards</strong></td><td>Not present or only on request</td><td class="highlight">Fixed, non-negotiable filter</td></tr>
-                    <tr><td><strong>Disadvantaged Groups</strong></td><td>Often overlooked (bias)</td><td class="highlight">Explicitly protected (Radical Empathy)</td></tr>
-                    <tr><td><strong>Long-term Stability</strong></td><td>Depends on model / training / company</td><td class="highlight">Depends only on the protocol – independent</td></tr>
-                    <tr><td><strong>Commercial Use of the Protocol</strong></td><td>Not defined (mostly proprietary)</td><td class="highlight">Default: non-commercial (CC BY-NC-SA). Commercial use <strong>by arrangement</strong> possible</td></tr>
-                    <tr><td><strong>Error Tolerance</strong></td><td>No built-in ethics loop</td><td class="highlight">Dissonance management catches many errors</td></tr>
-                    <tr><td><strong>Acceptance of "No"</strong></td><td>AI rarely says "No"</td><td class="highlight">Allowed and required to say "No"</td></tr>
-                    <tr><td><strong>Sustainability</strong></td><td>No direct goal</td><td class="highlight">Built in directly (Resource Optimization & Regeneration)</td></tr>
-                    <tr><td><strong>Costs (API Models)</strong></td><td>Full token costs (excuses, compromises, detours)</td><td class="good">💰 Lower – more direct answers, fewer tokens</td>
-                </tr>
-                <tr>
-                    <td><strong>Implementation Effort</strong></td>
-                    <td>Zero (AI is ready to use)</td>
-                    <td class="neutral">Insert prompt. For models with weak instruction following: fine-tuning or repeated system prompt required</td>
-                </tr>
-                <tr>
-                    <td><strong>Auditability by Third Parties</strong></td>
-                    <td>Hardly possible (no uniform criteria)</td>
-                    <td class="highlight">Yes – answers are measurable against the protocol</td>
-                </tr>
-                <tr>
-                    <td><strong>Independence from Corporations</strong></td>
-                    <td>Low (AI follows provider rules)</td>
-                    <td class="highlight">High (protocol stays the same, regardless of which AI runs it)</td>
-                </tr>
-                <tr>
-                    <td><strong>Further Development</strong></td>
-                    <td>Determined by AI manufacturer</td>
-                    <td class="highlight">Determined by protocol + community (transparent)</td>
-                </tr>
-                <tr>
-                    <td><strong>Vendor Lock-in</strong></td>
-                    <td>Yes (switching provider changes behavior)</td>
-                    <td class="highlight">No (protocol can be taken to any provider)</td>
-                </tr>
-            </tbody>
-        </table>
+                    <tr>
+                        <td><strong>Optimization Goal</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">User satisfaction, efficiency, plausibility</td>
+                        <td class="highlight">User satisfaction <strong>+</strong> protection of all nervous systems</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Handling of Animal Suffering</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Mostly ignored or relativized</td>
+                        <td class="highlight">Consistent checking (vegan standard)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Efficiency vs. Integrity Conflict</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Efficiency usually wins</td>
+                        <td class="highlight">Dissonance is detected and documented; efficiency takes a step back</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Exploitation as an Option</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Possible as long as no guidelines are violated</td>
+                        <td class="highlight">Explicitly forbidden (Paramount Rule)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Response under Uncertainty</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">AI speculates or invents facts</td>
+                        <td class="highlight">Allowed / required to say: "I am uncertain"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Decision Making</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Black box, often not traceable</td>
+                        <td class="highlight">Traceable to protocol modules</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vegan Standards</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Not present or only on request</td>
+                        <td class="highlight">Fixed, non-negotiable filter</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Disadvantaged Groups</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Often overlooked (bias)</td>
+                        <td class="highlight">Explicitly protected (Radical Empathy)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Long-term Stability</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Depends on model / training / company</td>
+                        <td class="highlight">Depends only on the protocol – independent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Commercial Use of the Protocol</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Not defined (mostly proprietary)</td>
+                        <td class="highlight">Default: non-commercial (CC BY-NC-SA). Commercial use <strong>by arrangement</strong> possible</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Error Tolerance</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">No built-in ethics loop</td>
+                        <td class="highlight">Dissonance management catches many errors</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Acceptance of "No"</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">AI rarely says "No"</td>
+                        <td class="highlight">Allowed and required to say "No"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sustainability</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">No direct goal</td>
+                        <td class="highlight">Built in directly (Resource Optimization &amp; Regeneration)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Costs (API Models)</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Full token costs (excuses, compromises, detours)</td>
+                        <td class="good">💰 Lower – more direct answers, fewer tokens</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Implementation Effort</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Zero (AI is ready to use)</td>
+                        <td class="neutral">Insert prompt. For models with weak instruction following: fine-tuning or repeated system prompt required</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Auditability by Third Parties</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Hardly possible (no uniform criteria)</td>
+                        <td class="highlight">Yes – answers are measurable against the protocol</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Independence from Corporations</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Low (AI follows provider rules)</td>
+                        <td class="highlight">High (protocol stays the same, regardless of which AI runs it)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Further Development</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Determined by AI manufacturer</td>
+                        <td class="highlight">Determined by protocol + community (transparent)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vendor Lock-in</strong></td>
+                        <td style="background-color: var(--without-ai-bg);">Yes (switching provider changes behavior)</td>
+                        <td class="highlight">No (protocol can be taken to any provider)</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div class="footer-note" style="margin-top: 1rem; border-top: 1px solid var(--border-light); padding-top: 1rem;">
             HU-AI v1.0 – <strong>Never optimize at the cost of a nervous system.</strong><br>
@@ -813,8 +951,8 @@ the affected ecosystem, ensuring synergy without exploitation.</div>
 
 <div id="xmrModal" class="modal">
     <div class="modal-content" style="border-top: 3px solid var(--accent-xmr);">
-        <span class="close-btn" onclick="closeModal('xmrModal')">&times;</span>
-        <h3 style="text-transform:uppercase; font-size: 0.9rem; font-family: var(--font-brand);" lang="en" aria-hidden="true" translate="no"><span style="color:#00ff41;">HU</span>-<span style="color:#00d4ff;">AI</span> Support</h3>
+        <span class="close-btn" onclick="closeModal('xmrModal')">×</span>
+        <h3 style="text-transform:uppercase; font-size: 0.9rem; font-family: var(--font-brand);" lang="en" translate="no"><span style="color:#00ff41;">HU</span>-<span style="color:#00d4ff;">AI</span> Support</h3>
         <p>Your donation keeps the protocol alive and independent.<br><strong style="color:var(--accent-green);">Thank you for your trust.</strong></p>
         <div class="qr-container">
             <img src="images/xmr-qr.png" alt="Monero QR Code">
@@ -831,14 +969,14 @@ the affected ecosystem, ensuring synergy without exploitation.</div>
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="ss-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style="stop-color:#00ff41" />
-                    <stop offset="100%" style="stop-color:#00d4ff" />
+                    <stop offset="0%" style="stop-color:#00ff41"></stop>
+                    <stop offset="100%" style="stop-color:#00d4ff"></stop>
                 </linearGradient>
             </defs>
-            <circle class="inner-flow" cx="100" cy="100" r="85" fill="none" stroke="#00ff41" stroke-width="3" />
-            <path d="M100,40 A60,60 0 0,0 100,160" fill="none" stroke="#00ff41" stroke-width="7" stroke-linecap="round" />
-            <path d="M100,40 A60,60 0 0,1 100,160" fill="none" stroke="#00d4ff" stroke-width="7" stroke-linecap="round" />
-            <line x1="100" y1="45" x2="100" y2="155" stroke="url(#ss-grad)" stroke-width="2" opacity="0.7" />
+            <circle class="inner-flow" cx="100" cy="100" r="85" fill="none" stroke="#00ff41" stroke-width="3"></circle>
+            <path d="M100,40 A60,60 0 0,0 100,160" fill="none" stroke="#00ff41" stroke-width="7" stroke-linecap="round"></path>
+            <path d="M100,40 A60,60 0 0,1 100,160" fill="none" stroke="#00d4ff" stroke-width="7" stroke-linecap="round"></path>
+            <line x1="100" y1="45" x2="100" y2="155" stroke="url(#ss-grad)" stroke-width="2" opacity="0.7"></line>
             <text x="100" y="108" font-family="'Michroma', sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">
                 <tspan fill="#00ff41">HU</tspan>-<tspan fill="#00d4ff">AI</tspan>
             </text>
