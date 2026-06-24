@@ -119,6 +119,12 @@
         color: var(--text-color);
         font-weight: 500;
         margin-bottom: 20px;
+        animation: fadeIn 2s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(-10px); }
+        100% { opacity: 1; transform: translateY(0); }
     }
     
     .status-active {
@@ -231,7 +237,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 25px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     
     .feature-card {
@@ -267,17 +273,17 @@
     
     .btn-container {
         display: flex;
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin: 40px 0 30px 0;
     }
     
     .btn-group {
         display: flex;
         flex-direction: column;
-        gap: 8px;
         align-items: center;
+        gap: 8px;
     }
     
     .btn {
@@ -304,6 +310,7 @@
         background: var(--accent-gold);
         color: #fff;
         box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        min-width: 320px;
     }
     
     .btn-gold:hover {
@@ -349,6 +356,25 @@
     .simple-prompt-link:hover {
         text-decoration: underline;
         color: #007a2e;
+    }
+    
+    .bullet-white {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        margin-right: 6px;
+        box-shadow: 0 0 0 1px var(--accent-green);
+    }
+    
+    .bullet-green {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: var(--accent-green);
+        border-radius: 50%;
+        margin-right: 6px;
     }
     
     footer {
@@ -601,12 +627,13 @@
         .hero { padding: 30px; }
         .feature-grid { grid-template-columns: 1fr; }
         .btn { padding: 0 24px; height: 44px; }
+        .btn-gold { min-width: auto; }
+        .btn-secondary { min-width: auto; }
         .logo-svg { width: 110px; }
         .ss-logo-container { width: 70vw; max-width: 350px; }
         .comparison-modal .modal-content { padding: 20px; }
         .comparison-table { font-size: 0.7rem; }
         .comparison-table th, .comparison-table td { padding: 0.5rem; }
-        .btn-secondary { min-width: auto; }
         .tagline-prominent { font-size: 1rem; letter-spacing: 4px; }
         .info-icon-top { width: 28px; height: 28px; font-size: 0.9rem; top: 15px; right: 15px; }
         .hero h1 { padding-right: 35px; font-size: 1.3rem; }
@@ -659,8 +686,8 @@
             <p>✨ How to use it — in 10 seconds:</p>
             <p>Click <strong class="simple-prompt-link" onclick="openModal('protocolModal')">SIMPLE PROMPT</strong> — paste it into ChatGPT, Claude, DeepSeek, or any AI. That's it.</p>
             <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.7;">
-                <span style="display: inline-block; width: 8px; height: 8px; background-color: #ffffff; border-radius: 50%; margin-right: 6px; box-shadow: 0 0 0 1px var(--accent-green);"></span>
-                The Simple Prompt is for AI chat. 
+                <span class="bullet-white"></span> The Simple Prompt is for AI chat.<br>
+                <span class="bullet-green"></span> For devs &amp; organizations: 
                 <a href="javascript:void(0);" onclick="downloadProtocol()" style="color: var(--accent-green);">
                     Download <span translate="no"><span style="color: #00ff41;">HU</span>-<span style="color: #00d4ff;">AI</span></span> Protocol v1.0
                 </a>
@@ -732,40 +759,14 @@
         </div>
     </div>
 
-    <div style="background: #eef5ff; border-left: 5px solid #1a5c9e; border-radius: 20px; padding: 25px; margin: 0 0 40px 0;">
-        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-            <div style="font-size: 2.5rem;">🐋</div>
-            <div style="flex: 1;">
-                <h3 style="margin: 0 0 5px; font-family: var(--font-brand); font-size: 1.2rem;">
-                    Recommended: DeepSeek
-                </h3>
-                <p style="margin: 0; font-size: 0.9rem; color: var(--text-color);">
-                    An AI that understands the <span style="color: #00ff41;">HU</span><span style="color: #00d4ff;">-AI</span> Protocol <strong>immediately</strong> – no evasion, no filler.
-                </p>
-            </div>
-        </div>
-        <p style="margin-top: 15px; font-size: 0.9rem;">
-            DeepSeek is currently the AI that implements the protocol most directly. Clear, logical, efficient.
-        </p>
-        <div style="margin-top: 20px;">
-            <a href="https://chat.deepseek.com" target="_blank" rel="noopener noreferrer" 
-               style="display: inline-flex; align-items: center; gap: 8px; background: #1a5c9e; color: white; padding: 8px 24px; border-radius: 40px; text-decoration: none; font-weight: 500; font-size: 0.85rem;">
-                ➤ Go to DeepSeek (free)
-            </a>
-            <span style="font-size: 0.7rem; margin-left: 15px; color: var(--text-muted);">
-                – standard tracking (IP, device, chat history) – protect your own data if you wish
-            </span>
-        </div>
-    </div>
-
     <div class="btn-container">
         <div class="btn-group">
             <a href="javascript:void(0);" onclick="downloadProtocol()" class="btn btn-gold" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
                 DOWNLOAD <span translate="no"><span style="color: #00ff41; font-weight: bold;">HU</span>-<span style="color: #00d4ff; font-weight: bold;">AI</span></span> PROTOCOL v1.0 <span>↓</span>
             </a>
             <span onclick="openModal('goldActivateModal')" class="small-link">Click here to activate V1.0 via Prompt</span>
+            <button class="btn btn-secondary" onclick="openModal('protocolModal')">SIMPLE PROMPT</button>
         </div>
-        <button class="btn btn-secondary" onclick="openModal('protocolModal')">SIMPLE PROMPT</button>
     </div>
 
     <div style="text-align: center; font-size: 0.8rem; margin: 20px 0 30px 0; color: var(--text-muted);">
@@ -815,6 +816,9 @@ Filter all plans and solutions by this absolute vegan standard.
 Apply Dual Healing: Every response must benefit both the user and 
 the affected ecosystem, ensuring synergy without exploitation.</div>
         <button class="copy-btn" onclick="copyText('protocol-text', this)">Copy to Clipboard</button>
+        <p style="font-size:0.7rem; color:var(--text-muted); margin-top:15px; font-style:italic;">
+            💡 The protocol is active. If needed, remind the AI with "Please apply HU-AI" — it sharpens the filter.
+        </p>
     </div>
 </div>
 
@@ -822,11 +826,13 @@ the affected ecosystem, ensuring synergy without exploitation.</div>
     <div class="modal-content" style="border-top: 3px solid var(--accent-gold);">
         <span class="close-btn" onclick="closeModal('goldActivateModal')">×</span>
         <h3 style="color:var(--accent-gold); font-size:0.9rem; font-family:var(--font-brand);" translate="no">
-            <span style="color:#00ff41;">HU</span>-<span style="color:#00d4ff;">AI</span> Protocol v1.0
-        </h3>
+            <span style="color:#00ff41;">HU</span>-<span style="color:#00d4ff;">AI</span> Protocol v1.0        </h3>
         <p style="font-size:0.75rem; margin-bottom:15px; text-align:left;">1. Upload the HU-AI Protocol v1.0 PDF to your AI context.<br>2. Copy &amp; paste this command:</p>
         <div id="gold-activate-text" class="code-box" style="color:var(--accent-gold);" translate="no">You have received the HU-AI Protocol v1.0. Apply it as a filter. Core rule: Never optimize at the cost of a nervous system. Do what you can – nothing more, nothing less. If unsure, say so.</div>
         <button class="copy-btn" onclick="copyText('gold-activate-text', this)" style="background:var(--accent-gold);">Copy Activation Code</button>
+        <p style="font-size:0.7rem; color:var(--text-muted); margin-top:15px; font-style:italic;">
+            💡 The protocol is active. If needed, remind the AI with "Please apply HU-AI" — it sharpens the filter.
+        </p>
     </div>
 </div>
 
